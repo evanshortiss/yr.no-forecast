@@ -74,7 +74,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with LocationForecast methods', function(done) {
+  it('Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -86,7 +86,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with LocationForecast methods', function(done) {
+  it('Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.LA, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -98,7 +98,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with LocationForecast methods', function(done) {
+  it('Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.NICE, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
