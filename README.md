@@ -12,11 +12,11 @@ yrno.getWeather({
   lon: 6.2597
 }, function(err, location) {
 	// Weather for next five days (Array with five object)
-	location.getFiveDayForecast(cb);
+	location.getFiveDaySummary(cb);
 	// Current conditions
-    location.getCurrentSummary(cb);
-    // Weather anytime from now till future
-    location.getForecastForTime(time, cb);
+  location.getCurrentSummary(cb);
+  // Weather anytime from now till future
+  location.getForecastForTime(time, cb);
 });
 ```
 ### Weather JSON Format
