@@ -1,0 +1,39 @@
+yr.no-forecast
+=============
+
+Wrapper to easily get weather data for a specified location. See the API docs at [yr.no](http://api.yr.no/weatherapi/locationforecast/1.8/documentation)
+
+
+###Usage
+```
+var yrno = require('yr.no-forecast');
+yrno.getWeather({
+  lat: 53.3478,
+  lon: 6.2597
+}, function(err, location) {
+	// Weather for next five days (Array with five object)
+	location.getFiveDayForecast(cb);
+	// Current conditions
+    location.getCurrentSummary(cb);
+    // Weather anytime from now till future
+    location.getForecastForTime(time, cb);
+});
+```
+### Weather JSON Format
+Format is inspired by that of forecast.io service.
+
+```
+{
+	icon: 'PARTLYCLOUD',
+    to: '2013-11-08T14:00:00Z',
+    from: '2013-11-08T13:00:00Z',
+    rain: '0.0 mm',
+    temperature: '10.0',
+    windSpeed: '5.0m/s',
+    windBearing: '188.3',
+    beaufort: '3',
+    cloudCover: '77.0',
+    humidity: '80.6%',
+    pressure: '1006.3 hPa'
+}
+```
