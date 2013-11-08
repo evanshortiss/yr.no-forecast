@@ -1,0 +1,29 @@
+{
+  "name": "yr.no-forecast",
+  "version": "0.0.1",
+  "description": "Module to easily retrieve simple weather forecast for a given time and location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yr.no-interface": "0.0.2",
+    "moment": "2.4.0",
+    "xml2js": "0.2.8",
+    "async": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanshortiss/yr.no-forecast"
+  },
+  "keywords": [
+    "yr.no",
+    "api",
+    "met",
+    "weather",
+    "Meteorologisk",
+    "NRK"
+  ],
+  "author": "Evan Shortiss",
+  "license": "MIT"
+}
