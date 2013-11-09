@@ -40,6 +40,8 @@ describe('Test module', function() {
 
   it('Should return array with 5 weather objects', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
+      assert(!err);
+      assert(weather);
       weather.getFiveDaySummary(function(err, summary) {
         assert(!err);
         assert(summary);

@@ -1,3 +1,17 @@
+// Copyright 2013 Evan Shortiss
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        http://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+
 module.exports = {
   getWeather: getWeather
 };
@@ -29,8 +43,8 @@ function getWeather(params, callback, version) {
 
 function LocationForecast(xml, callback) {
   this.xml = xml;
-  this.hourlies = [];
-  this.summaries = [];
+  this.basic = [];
+  this.detail = [];
 
   // Parse to JSON and return this object on success
   var self = this;
@@ -58,9 +72,9 @@ LocationForecast.prototype = {
     async.forEach(json['weatherdata']['product']['time'], function(time, cb) {
       // Forecast data with a symbol is a basic summary
       if (time['location']['symbol']) {
-        self.summaries.push(time);
+        self.basic.push(time);
       } else {
-        self.hourlies.push(time);
+        self.detail.push(time);
       }
       cb();
     }, function() {
@@ -68,124 +82,118 @@ LocationForecast.prototype = {
     });
   },
 
+
+  /**
+   * Return JSON of weather
+   */
   getJson: function() {
     return this.json;
   },
 
+
+  /**
+   * Return XML of weather
+   */
   getXml: function() {
     return this.xml;
   },
 
+
   /**
-   * Search for a matching hourly/summary.
-   * @param {Array}     collection    Summary or Hourly
-   * @param {Mixed}     time          String or Date object
-   * @param {Function}  closestMatch  Find the cloest time.
-   * @param {Function}  callback
+   * Provides detailed forecasts for a given date.
+   * @param {Array}         collection
+   * @param {String|Object} date
+   * @param {Function}      callback
    */
-  _getForTime: function(collection, time, closestMatch, callback) {
-    // Convert time to moment object at UTC
-    time = moment.utc(time);
+  _getItemsForDay: function(collection, date, callback) {
+    date = moment.utc(date);
 
-    // Storage for returned val
-    var nearestSummary = null;
-
-    if (!callback) {
-      callback = closestMatch;
-      closestMatch = false;
-    }
-
-    // Loop over summaries and find one for time specified
-    async.forEach(collection, function(curSummary, cb) {
-      var from = moment(curSummary.from),
-        to = moment(curSummary.to);
-
-      // Check is time in between summaries
-      if ((from.isBefore(time) || from.isSame(time)) && (to.isAfter(time) || to.isSame(time))) {
-        // Close enough, return it.
-        if (!closestMatch) {
-          return cb(curSummary);
-        }
-        // See is this summary a smaller time range than previous, if so use it.
-        else if (nearestSummary && closestMatch) {
-          var nearestRange = Math.abs(moment(nearestSummary.to).diff(moment(nearestSummary.from)));
-          var curRange = Math.abs(moment(curSummary.to).diff(moment(curSummary.from)))
-          if (nearestRange > curRange) {
-            nearestSummary = curRange
-          }
-        } else {
-          nearestSummary = curSummary;
-        }
+    var res = [];
+    async.each(collection, function(item, cb) {
+      if (moment.utc(item.from).isSame(date, 'day') || moment.utc(item.to).isSame(date, 'day')) {
+        res.push(item);
       }
-
       cb();
-    }, function(summary) {
-      if (summary) {
-        return callback(null, summary);
-      }
-
-      return callback(null, nearestSummary);
+    }, function(err) {
+      return callback(null, res);
     });
   },
 
 
   /**
-   * Get a summary for a specific time.
-   * @param {Mixed}     time
-   * @param {Boolean}   [closestMatch]
-   * @param {Function}  callback
+   * Get detailed items for a time.
+   * Find nearest hour on same day, or no result.
+   * @param {String|Object}
+   * @param {Function}
    */
-  getSummaryForTime: function(time, closestMatch, callback) {
-    this._getForTime(this.summaries, time, closestMatch, callback);
-  },
+  _getDetailForTime: function(date, callback) {
+    date = moment.utc(date);
 
+    // Used to find closest time to one provided
+    var maxDifference = Infinity;
+    var res = null;
 
-  /**
-   * Get a hourly for a specific time.
-   * @param {Mixed}     time
-   * @param {Boolean}   [closestMatch]
-   * @param {Function}  callback
-   */
-  getHourlyForTime: function(time, closestMatch, callback) {
-    var self = this;
-
-    // Round to nearest hour
-    var t = time.clone();
-    t.endOf('hour');
-    t.milliseconds(t.milliseconds() + 1);
-
-    // Control how many lookups are done before giving up
-    var hoursAdded = 0;
-
-    this._getForTime(this.hourlies, t, closestMatch, function(err, hourly) {
-      if(err) {
-        return callback(err);
-      }
-
-      // Go again but add on an hour...
-      if(!hourly && hoursAdded<6) {
-        hoursAdded++;
-        t.add('hour', hoursAdded);
-        self.getHourlyForTime(t, closestMatch, callback);
-      } else {
-        return callback(null, hourly);
-      }
+    // Get any detail items for the date
+    this._getItemsForDay(this.detail, date, function(err, items) {
+      // Find the one closest to our time
+      async.each(items, function(item, cb) {
+        // Only look at 'to' as it and 'from' are same
+        var diff = Math.abs(moment.utc(item.to).diff(date));
+        if (diff < maxDifference) {
+          maxDifference = diff;
+          res = item;
+        }
+        cb();
+      }, function() {
+        return callback(null, res);
+      });
     });
   },
 
 
   /**
-   * Get basic summary for current time.
+   * Get basic items for a time.
+   * Find nearest hour on same day, or no result.
+   * @param {String|Object}
+   * @param {Function}
+   */
+  _getBasicForTime: function(date, callback) {
+    date = moment.utc(date);
+
+    // Used to find closest time to one provided
+    var maxDifference = Infinity;
+    var res = null;
+
+    // Variables used in loop
+    var to, from;
+
+    // Get any detail items for the date
+    this._getItemsForDay(this.basic, date, function(err, items) {
+      // Find times that have small range 'from' to 'to'
+      // That our provided time falls between
+      async.each(items, function(item, cb) {
+        to = moment.utc(item.to);
+        from = moment.utc(item.from);
+
+        // Check the date falls in range
+        if ((from.isSame(date) || from.isBefore(date)) && (to.isSame(date) || to.isAfter(date))) {
+          var diff = Math.abs(to.diff(from));
+          if (diff < maxDifference) {
+            maxDifference = diff;
+            res = item;
+          }
+        }
+        cb();
+      }, function() {
+        return callback(null, res);
+      });
+    });
+  },
+
+
+  /**
+   * Get five day weather.
    * @param {Function} callback
-   */
-  getCurrentSummary: function(callback) {
-    this.getForecastForTime(Date.now(), callback);
-  },
-
-
-  /**
-   * Get the forecast for next five days.
-   * @params {Function} callback
    */
   getFiveDaySummary: function(callback) {
     var self = this;
@@ -209,7 +217,6 @@ LocationForecast.prototype = {
           })
         });
       })()
-
     }
 
     // Run tasks and return weather array
@@ -224,47 +231,52 @@ LocationForecast.prototype = {
 
 
   /**
-   * Get a forecast conditions for a time specified.
-   * @params {Mixed}    time
-   * @params {Function} callback
+   * Returns a forecast for a given time.
+   * @param {String|Date} time
+   * @param {Function}    callback
    */
   getForecastForTime: function(time, callback) {
     var self = this;
 
     time = moment.utc(time);
-    time.minutes(time.zone());
     if (time.isValid() === false) {
-      return callback({
-        msg: 'Invalid date provided for weather lookup. Date: ' + time.toString()
-      });
+      return callback('Invalid date provided for weather lookup. Date: ' + time);
     }
 
-    this.getSummaryForTime(time, true, function(err, summary) {
-      if (!summary) {
-        return callback('No weather summary for time ' + time.toJSON(), null);
+    this._getBasicForTime(time, function(err, basic) {
+      if (!basic) {
+        return callback('No weather basic for time ' + time.toJSON(), null);
       }
 
       var res = {
-        icon: summary['location']['symbol']['id'],
-        to: summary['to'],
-        from: summary['from'],
-        rain: (summary['location']['precipitation']['value'] + ' ' + summary['location']['precipitation']['unit'])
+        icon: basic['location']['symbol']['id'],
+        to: basic['to'],
+        from: basic['from'],
+        rain: (basic['location']['precipitation']['value'] + ' ' + basic['location']['precipitation']['unit'])
       };
 
-      self.getHourlyForTime(time, true, function(err, hourly) {
-        if (hourly) {
+      self._getDetailForTime(time, function(err, detail) {
+        if (detail) {
           // Build response
-          res.temperature = hourly['location']['temperature']['value'];
-          res.windSpeed = hourly['location']['windSpeed']['mps'] + 'm/s';
-          res.windBearing = hourly['location']['windDirection']['deg'];
-          res.beaufort = hourly['location']['windSpeed']['beaufort'];
-          res.cloudCover = hourly['location']['cloudiness']['percent'];
-          res.humidity = hourly['location']['humidity']['value'] + '%';
-          res.pressure = hourly['location']['pressure']['value'] + ' ' + hourly['location']['pressure']['unit'];
+          res.temperature = detail['location']['temperature']['value'];
+          res.windSpeed = detail['location']['windSpeed']['mps'] + 'm/s';
+          res.windBearing = detail['location']['windDirection']['deg'];
+          res.beaufort = detail['location']['windSpeed']['beaufort'];
+          res.cloudCover = detail['location']['cloudiness']['percent'];
+          res.humidity = detail['location']['humidity']['value'] + '%';
+          res.pressure = detail['location']['pressure']['value'] + ' ' + detail['location']['pressure']['unit'];
         }
-
         return callback(null, res);
       });
     });
-  }
+  },
+
+
+  /**
+   * Get basic summary for current time.
+   * @param {Function} callback
+   */
+  getCurrentSummary: function(callback) {
+    this.getForecastForTime(Date.now(), callback);
+  },
 };
