@@ -22,7 +22,7 @@ yrno.getWeather({
 }, [VERSION]);
 ```
 ### Weather JSON Format
-Format is inspired by that of [forecast.io](https://developer.forecast.io/) service.
+Format is inspired by that of [forecast.io](https://developer.forecast.io/) service. Not all fields will always be available. Fields that no data was retrieved for contain the null value;
 
 ```
 {
@@ -37,5 +37,8 @@ Format is inspired by that of [forecast.io](https://developer.forecast.io/) serv
     cloudCover: '77.0',
     humidity: '80.6%',
     pressure: '1006.3 hPa'
+    lowCloud: null, 
+    highCloud: null
+    ...
 }
 ```

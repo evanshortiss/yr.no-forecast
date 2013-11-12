@@ -13,6 +13,10 @@ var LOCATIONS = {
   NICE: {
     lat: 43.6652,
     lon: 7.215
+  },
+  RYGGE: {
+    lat: 59.375825399,
+    lon: 10.7814121
   }
 };
 
@@ -76,6 +80,18 @@ describe('Test module', function() {
   });
 
 
+  it('Should return array with 5 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
+      weather.getFiveDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
   it('Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
@@ -102,6 +118,18 @@ describe('Test module', function() {
 
   it('Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.NICE, function(err, weather) {
+      weather.getCurrentSummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(checkSummary(summary));
+        done();
+      });
+    });
+  });
+
+
+  it('Should return an object with info fields', function(done) {
+    lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
         assert(summary);
