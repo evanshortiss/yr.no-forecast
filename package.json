@@ -1,6 +1,6 @@
 {
   "name": "yr.no-forecast",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Module to easily retrieve simple weather forecast for a given time and location.",
   "main": "./index.js",
   "scripts": {
