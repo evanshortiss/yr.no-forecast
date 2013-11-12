@@ -21,69 +21,11 @@ var yrno = require('yr.no-interface'),
   async = require('async'),
   xml2js = require('xml2js');
 
-// Could do with improving, see schema for api.
-var DETAILED_FIELDS = [{
-  tagname: 'temperature',
-  id: 'TTT',
-  valueSelector: 'value',
-  name: 'temperature'
-}, {
-  tagname: 'windSpeed',
-  id: 'ff',
-  valueSelector: 'mps',
-  name: 'windSpeed'
-}, {
-  tagname: 'windSpeed',
-  valueSelector: 'beaufort',
-  name: 'beaufort',
-  id: 'ff'
-}, {
-  tagname: 'windDirection',
-  name: 'windBearing',
-  id: 'dd',
-  valueSelector: 'deg'
-}, {
-  tagname: 'cloudiness',
-  name: 'cloudCover',
-  id: 'NN',
-  valueSelector: 'percent'
-}, {
-  tagname: 'humidity',
-  name: 'humidity',
-  id: '',
-  valueSelector: 'value'
-}, {
-  tagname: 'pressure',
-  name: 'pressure',
-  id: 'pr',
-  valueSelector: 'value'
-}, {
-  tagname: 'dewpointTemperature',
-  id: 'TD',
-  name: 'dewpointTemperature',
-  valueSelector: 'value'
-}, {
-  tagname: 'fog',
-  id: 'FOG',
-  valueSelector: 'percent',
-  name: 'fog',
-}, {
-  tagname: 'highClouds',
-  id: 'HIGH',
-  name: 'highClouds',
-  valueSelector: 'percent'
-}, {
-  tagname: 'mediumClouds',
-  id: 'MEDIUM',
-  name: 'mediumClouds',
-  valueSelector: 'percent'
-}, {
-  tagname: 'lowClouds',
-  id: 'LOW',
-  name: 'lowClouds',
-  valueSelector: 'percent'
-}];
-
+/**
+ * @constructor
+ * @param {String}    xml
+ * @param {Function}  callback
+ */
 
 function LocationForecast(xml, callback) {
   this.xml = xml;
@@ -108,10 +50,7 @@ function LocationForecast(xml, callback) {
 LocationForecast.prototype = {
   _init: function(callback) {
     var self = this;
-
     var json = this.json;
-    var current = json['weatherdata']['product']['time'][0];
-    current.symbol = json['weatherdata']['product']['time'][1]['symbol'];
 
     async.forEach(json['weatherdata']['product']['time'], function(time, cb) {
       // Forecast data with a symbol is a basic summary
@@ -176,7 +115,7 @@ LocationForecast.prototype = {
       if (err) {
         return callback(err, null);
       }
-
+      
       return callback(null, res);
     });
   },
@@ -197,19 +136,12 @@ LocationForecast.prototype = {
 
     getBasicForTime(time, self.basic, function(err, basic) {
       if (!basic) {
-        return callback('No weather basic for time ' + time.toJSON(), null);
+        return callback(null, {});
       }
-
-      var res = {
-        icon: basic['location']['symbol']['id'],
-        to: basic['to'],
-        from: basic['from'],
-        rain: (basic['location']['precipitation']['value'] + ' ' + basic['location']['precipitation']['unit'])
-      };
 
       getDetailForTime(time, self.detail, function(err, detail) {
         if (detail) {
-          return callback(null, buildDetail(detail, res));
+          return callback(null, buildDetail(detail, basic));
         }
         return callback(null, res);
       });
@@ -233,7 +165,7 @@ LocationForecast.prototype = {
  * @param {Object} obj
  */
 
-function buildDetail(detail, obj) {
+function buildDetail(detail, basic) {
   // <location altitude="48" latitude="59.3758" longitude="10.7814">
   //   <temperature id="TTT" unit="celcius" value="6.3"/>
   //   <windDirection id="dd" deg="223.7" name="SW"/>
@@ -248,19 +180,36 @@ function buildDetail(detail, obj) {
   //   <dewpointTemperature id="TD" unit="celcius" value="4.2"/>
   // </location>
 
+  var obj = {
+    icon: basic['location']['symbol']['id'],
+    to: basic['to'],
+    from: basic['from'],
+    rain: (basic['location']['precipitation']['value'] + ' ' + basic['location']['precipitation']['unit'])
+  };
+
   // Corresponds to XML 'location' element
   var location = detail.location;
+  var cur = null;
+  for (var key in location) {
+    cur = location[key];
 
-  DETAILED_FIELDS.forEach(function(field) {
-    var item = location[field.tagname];
-
-    // If the field exists, add it and it's value to the object
-    if (item) {
-      obj[field.name] = location[field.tagname][field.valueSelector];
-    } else {
-      obj[field.name] = null;
+    // Based on field type build the response
+    // Type 1: Has "value" and "unit", combine for result
+    // Type 2: Has only "percent"
+    // Type 3: Has multiple properties where the name is the value
+    if (cur.hasOwnProperty('value')) {
+      obj[key] = cur['value'] + ' ' + cur['unit'];
+    } else if (cur.hasOwnProperty('percent')) {
+      obj[key] = cur['percent'] + '%';
+    } else if (typeof cur === 'object') {
+      obj[key] = {};
+      for (var nestedKey in cur) {
+        if (nestedKey != 'id') {
+          obj[key][nestedKey] = cur[nestedKey];
+        }
+      }
     }
-  });
+  }
 
   return obj;
 }

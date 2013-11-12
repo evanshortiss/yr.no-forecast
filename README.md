@@ -5,7 +5,7 @@ Wrapper to easily get weather data for a specified location in JSON format. Uses
 
 
 ###Usage
-Use the ```getWeather(queryStringParams, callback|stream, [VERSION])``` function to get a LocationForecast object. This object has functions that take a callback as parameter and are detailed in the example below.
+Use the ```getWeather(queryStringParams, callback|stream, [VERSION])``` function to get a LocationForecast object, where version represents the version of the "locationforecast" service to use. This object has functions that take a callback as parameter and are detailed in the example below.
 
 ```
 var yrno = require('yr.no-forecast');
@@ -22,23 +22,25 @@ yrno.getWeather({
 }, [VERSION]);
 ```
 ### Weather JSON Format
-Format is inspired by that of [forecast.io](https://developer.forecast.io/) service. Not all fields will always be available. Fields that no data was retrieved for contain the null value;
+Format is somewhat inspired by that of [forecast.io](https://developer.forecast.io/) service. Not all fields will always be available. Fields that no data was retrieved for contain the null value;
 
 ```
-{
-	icon: 'PARTLYCLOUD',
-    to: '2013-11-08T14:00:00Z',
-    from: '2013-11-08T13:00:00Z',
+{ 
+    icon: 'PARTLYCLOUD',
+    to: '2013-11-15T18:00:00Z',
+    from: '2013-11-15T12:00:00Z',
     rain: '0.0 mm',
-    temperature: '10.0',
-    windSpeed: '5.0m/s',
-    windBearing: '188.3',
-    beaufort: '3',
-    cloudCover: '77.0',
-    humidity: '80.6%',
-    pressure: '1006.3 hPa'
-    lowCloud: null, 
-    highCloud: null
+    temperature: '9.7 celcius',
+    windDirection: { deg: '220.2', name: 'SW' },
+    windSpeed: { mps: '2.7', beaufort: '2', name: 'Svak vind' },
+    humidity: '27.9 percent',
+    pressure: '1021.0 hPa',
+    cloudiness: '0.0%',
+    fog: '0.0%',
+    lowClouds: '0.0%',
+    mediumClouds: '0.0%',
+    highClouds: '0.0%',
+    dewpointTemperature: '-8.3 celcius',
     ...
 }
 ```
