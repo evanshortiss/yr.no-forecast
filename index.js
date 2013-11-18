@@ -91,6 +91,7 @@ LocationForecast.prototype = {
     var fns = [];
     // Use miday for forecast
     var curDate = moment.utc().hours(12);
+    curDate.set('minutes', 0);
 
     // Create 5 days of dates
     for (var i = 0; i < 5; i++) {
@@ -236,6 +237,36 @@ function getWeather(params, callback, version) {
 
 
 /**
+ * Used when no matching element is found for a time of a day.
+ * @param   {Date}      time
+ * @param   {Array}     collection
+ * @param   {Function}  callback
+ */
+function fallbackSelector(time, collection, callback) {
+  time = moment(time);
+
+  // Find out is time before or after collection range
+  var isBefore = false;
+  async.each(collection, function(item, cb) {
+    if(time.isBefore(moment(item.to))) {
+      isBefore = true;
+      return cb(true);
+    }
+
+    cb();
+  }, function() {
+    // Take earlist time possbile
+    if(isBefore == true) {
+      return callback(null, collection[0]);
+    }
+
+    // Take latest time possible
+    return callback(null, collection[collection.length-1]);
+  });
+}
+
+
+/**
  * Get detailed items for a time.
  * Find nearest hour on same day, or no result.
  * @param {String|Object}
@@ -261,10 +292,15 @@ function getDetailForTime(date, detail, callback) {
       }
       cb();
     }, function() {
+      if(res == null) {
+        return fallbackSelector(date, detail, callback);
+      }
+
       return callback(null, res);
     });
   });
 }
+
 
 /**
  * Get basic items for a time.
@@ -301,6 +337,10 @@ function getBasicForTime(date, basic, callback) {
       }
       cb();
     }, function() {
+      if(res == null) {
+        return fallbackSelector(date, basic, callback);
+      }
+
       return callback(null, res);
     });
   });

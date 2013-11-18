@@ -1,4 +1,5 @@
 var assert = require('assert'),
+  moment = require('moment'),
   lib = require('../index.js');
 
 var LOCATIONS = {
@@ -31,7 +32,7 @@ function checkSummary(weather) {
 describe('Test module', function() {
   this.timeout(10000);
 
-  it('Should return an object with LocationForecast methods', function(done) {
+  it('getWeather: Should return an object with LocationForecast methods', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
       assert(!err);
       assert(weather);
@@ -42,7 +43,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return array with 5 weather objects', function(done) {
+  it('getFiveDaySummary: Should return array with 5 weather objects', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
       assert(!err);
       assert(weather);
@@ -56,7 +57,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return array with 5 weather objects', function(done) {
+  it('getFiveDaySummary: Should return array with 5 weather objects', function(done) {
     lib.getWeather(LOCATIONS.NICE, function(err, weather) {
       weather.getFiveDaySummary(function(err, summary) {
         assert(!err);
@@ -68,7 +69,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return array with 5 weather objects', function(done) {
+  it('getFiveDaySummary: Should return array with 5 weather objects', function(done) {
     lib.getWeather(LOCATIONS.LA, function(err, weather) {
       weather.getFiveDaySummary(function(err, summary) {
         assert(!err);
@@ -80,7 +81,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return array with 5 weather objects', function(done) {
+  it('getFiveDaySummary: Should return array with 5 weather objects', function(done) {
     lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
       weather.getFiveDaySummary(function(err, summary) {
         assert(!err);
@@ -92,7 +93,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with info fields', function(done) {
+  it('getCurrentSummary: Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -104,7 +105,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with info fields', function(done) {
+  it('getCurrentSummary: Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.LA, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -116,7 +117,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with info fields', function(done) {
+  it('getCurrentSummary: Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.NICE, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -128,7 +129,7 @@ describe('Test module', function() {
   });
 
 
-  it('Should return an object with info fields', function(done) {
+  it('getCurrentSummary: Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
       weather.getCurrentSummary(function(err, summary) {
         assert(!err);
@@ -139,3 +140,37 @@ describe('Test module', function() {
     });
   });
 });
+
+
+describe('Test retrieval for various times', function() {
+  this.timeout(10000);
+
+  it('Should get weather for earliest time possible today by requesting some time yesterday', function(done) {
+    var time = moment();
+    time.set('hours', (time.hours() - time.hours() - 4) );
+    lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
+      assert(!err);
+      assert(weather);
+      weather.getForecastForTime(time, function(err, forecast) {
+        assert(!err);
+        assert(forecast);
+        done();
+      });
+    });
+  });
+
+  it('Should get weather for 9:20 PM (21:20) tonight', function(done) {
+    var time = moment();
+    time.set('hours', 21);
+    time.set('minutes', 20);
+    lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
+      assert(!err);
+      assert(weather);
+      weather.getForecastForTime(time, function(err, forecast) {
+        assert(!err);
+        assert(forecast);
+        done();
+      });
+    });
+  });
+})
