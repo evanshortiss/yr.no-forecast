@@ -224,15 +224,17 @@ function buildDetail(detail, basic) {
  */
 
 function getWeather(params, callback, version) {
+  version = version || 1.9;
+
   // Make a standard call to the API
-  yrno.locationforecast(params, function(err, body) {
+  yrno.locationforecast(params, version, function(err, body) {
     if (err) {
       return callback(err, null);
     }
 
     // Wrap the response from API
     new LocationForecast(body, callback);
-  }, version);
+  });
 }
 
 
