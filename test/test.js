@@ -1,3 +1,5 @@
+//npm install mocha
+//npm test
 var assert = require('assert'),
   moment = require('moment'),
   lib = require('../index.js');
@@ -92,6 +94,104 @@ describe('Test module', function() {
     });
   });
 
+
+  it('getSevenDaySummary: Should return array with 7 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
+      assert(!err);
+      assert(weather);
+      weather.getSevenDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getSevenDaySummary: Should return array with 7 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.NICE, function(err, weather) {
+      weather.getSevenDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getSevenDaySummary: Should return array with 7 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.LA, function(err, weather) {
+      weather.getSevenDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getSevenDaySummary: Should return array with 7 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
+      weather.getSevenDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+  it('getNineDaySummary: Should return array with 9 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {
+      assert(!err);
+      assert(weather);
+      weather.getNineDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getNineDaySummary: Should return array with 9 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.NICE, function(err, weather) {
+      weather.getNineDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getNineDaySummary: Should return array with 9 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.LA, function(err, weather) {
+      weather.getNineDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
+
+
+  it('getNineDaySummary: Should return array with 9 weather objects', function(done) {
+    lib.getWeather(LOCATIONS.RYGGE, function(err, weather) {
+      weather.getNineDaySummary(function(err, summary) {
+        assert(!err);
+        assert(summary);
+        assert(summary instanceof Array);
+        done();
+      });
+    });
+  });
 
   it('getCurrentSummary: Should return an object with info fields', function(done) {
     lib.getWeather(LOCATIONS.DUBLIN, function(err, weather) {

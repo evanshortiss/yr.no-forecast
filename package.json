@@ -4,13 +4,13 @@
   "description": "Module to easily retrieve simple weather forecast for a given time and location.",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "dependencies": {
-    "yr.no-interface": "0.1.1",
-    "moment": "2.4.0",
+    "async": "0.2.9",
+    "moment": "^2.4.0",
     "xml2js": "0.2.8",
-    "async": "0.2.9"
+    "yr.no-interface": "0.1.1"
   },
   "license": "MIT",
   "repository": {

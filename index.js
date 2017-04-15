@@ -116,10 +116,91 @@ LocationForecast.prototype = {
       if (err) {
         return callback(err, null);
       }
-      
+
       return callback(null, res);
     });
   },
+
+
+    /**
+     * Get seven day weather.
+     * @param {Function} callback
+     */
+    getSevenDaySummary: function(callback) {
+      var self = this;
+      var fns = [];
+      // Use miday for forecast
+      var curDate = moment.utc().hours(12);
+      curDate.set('minutes', 0);
+
+      // Create 7 days of dates
+      for (var i = 0; i < 7; i++) {
+        // Avoid scope error for wrong day reference
+        (function() {
+          var day = curDate.clone();
+          day = day.add('days', i);
+          fns.push(function(cb) {
+            self.getForecastForTime(day, function(err, weather) {
+              if (err) {
+                return cb(err, null);
+              }
+
+              return cb(null, weather);
+            })
+          });
+        })()
+      }
+
+      // Run tasks and return weather array
+      async.series(fns, function(err, res) {
+        if (err) {
+          return callback(err, null);
+        }
+
+        return callback(null, res);
+      });
+    },
+
+
+      /**
+       * Get nine day weather.
+       * @param {Function} callback
+       */
+      getNineDaySummary: function(callback) {
+        var self = this;
+        var fns = [];
+        // Use miday for forecast
+        var curDate = moment.utc().hours(12);
+        curDate.set('minutes', 0);
+
+        // Create 9 days of dates
+        for (var i = 0; i < 9; i++) {
+          // Avoid scope error for wrong day reference
+          (function() {
+            var day = curDate.clone();
+            day = day.add('days', i);
+            fns.push(function(cb) {
+              self.getForecastForTime(day, function(err, weather) {
+                if (err) {
+                  return cb(err, null);
+                }
+
+                return cb(null, weather);
+              })
+            });
+          })()
+        }
+
+        // Run tasks and return weather array
+        async.series(fns, function(err, res) {
+          if (err) {
+            return callback(err, null);
+          }
+
+          return callback(null, res);
+        });
+      },
+
 
 
   /**
