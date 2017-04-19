@@ -1,11 +1,12 @@
 yr.no-forecast
 =============
 
-Wrapper to easily get weather data for a specified location in JSON format. Uses [yr.no-interface](https://github.com/evanshortiss/yr.no-interface) under the hood. See the API docs at [yr.no](http://api.yr.no/weatherapi/locationforecast/1.8/documentation). 
+Wrapper to easily get weather data for a specified location in JSON format. Uses [yr.no-interface](https://github.com/evanshortiss/yr.no-interface) under the hood. See the API docs at [yr.no](http://api.yr.no/weatherapi/locationforecast/1.8/documentation).
+NOTE: Yr.no has some rules regarding usage of their API. Read more at [http://om.yr.no/](http://om.yr.no/verdata/free-weather-data/).
 
 
 ###Usage
-Use the ```getWeather(queryStringParams, callback|stream, [VERSION])``` function to get a LocationForecast object, where version represents the version of the "locationforecast" service to use. This object has functions that take a callback as parameter and are detailed in the example below.
+Use the ```getWeather(queryStringParams, callback|stream, [VERSION])``` function to get a LocationForecast object, where version represents the version of the "locationforecast" service to use. This object has functions that take a callback as parameter and are detailed in the example below. See examples/ for more.
 
 ```
 var yrno = require('yr.no-forecast');
@@ -14,7 +15,7 @@ yrno.getWeather({
   lon: 6.2597
 }, function(err, location) {
   // Weather for next five days (Array with five object)
-  location.getFiveDaySummary(cb);
+  location.getWeatherForNextDays(days=5,cb);
   // Current conditions
   location.getCurrentSummary(cb);
   // Weather anytime from now till future
@@ -25,7 +26,7 @@ yrno.getWeather({
 Format is somewhat inspired by that of [forecast.io](https://developer.forecast.io/) service. Not all fields will always be available. Fields that no data was retrieved for contain the null value;
 
 ```
-{ 
+{
     icon: 'PARTLYCLOUD',
     to: '2013-11-15T18:00:00Z',
     from: '2013-11-15T12:00:00Z',

@@ -7,10 +7,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "async": "0.2.9",
-    "moment": "^2.4.0",
+    "yr.no-interface": "0.1.1",
+    "moment": "2.4.0",
     "xml2js": "0.2.8",
-    "yr.no-interface": "0.1.1"
+    "async": "0.2.9"
   },
   "license": "MIT",
   "repository": {
