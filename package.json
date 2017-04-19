@@ -4,7 +4,7 @@
   "description": "Module to easily retrieve simple weather forecast for a given time and location.",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "dependencies": {
     "yr.no-interface": "0.1.1",
