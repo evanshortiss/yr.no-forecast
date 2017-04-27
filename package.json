@@ -39,7 +39,9 @@
     "NRK",
     "yr",
     "no",
-    "met.no"
+    "met.no",
+    "api.met.no",
+    "forecast"
   ],
   "engines": {
     "node": ">=4.4.2"
