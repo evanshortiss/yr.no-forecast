@@ -200,19 +200,6 @@ describe('yr.no-forecast', function() {
         .then(function (forecast) {
           expect(forecast).to.be.an('object');
           expect(forecast.from).to.equal('2017-04-18T02:00:00Z');
-        });
-    });
-
-    it('should get weather for earliest time possible today by requesting some time yesterday', function() {
-      var time = moment('2017-04-18');
-      time.set('hours', time.hours() - time.hours() - 4);
-
-      return lib().getWeather(LOCATION)
-        .then(function(weather) {
-          return weather.getForecastForTime(time);
-        })
-        .then(function (forecast) {
-          expect(forecast).to.be.an('object');
 
           expect(forecast.icon).to.be.a('string');
           expect(forecast.to).to.be.a('string');
@@ -230,6 +217,23 @@ describe('yr.no-forecast', function() {
           expect(forecast.mediumClouds).to.be.a('string');
           expect(forecast.highClouds).to.be.a('string');
           expect(forecast.dewpointTemperature).to.be.a('string');
+        });
+    });
+
+    it('should get weather for earliest time possible today by requesting some time yesterday', function() {
+      var time = moment('2017-04-18').utc().startOf('day');
+      time.set('hours', time.hours() - time.hours() - 2);
+
+      return lib().getWeather(LOCATION)
+        .then(function(weather) {
+          return weather.getForecastForTime(time);
+        })
+        .then(function (forecast) {
+          expect(forecast).to.be.an('object');
+          expect(forecast.icon).to.be.a('string');
+          expect(forecast.to).to.be.a('string');
+          expect(forecast.from).to.be.a('string');
+          expect(forecast.rain).to.be.a('string');
         });
     });
 
