@@ -1,16 +1,29 @@
 {
   "name": "yr.no-forecast",
-  "version": "0.0.7",
-  "description": "Module to easily retrieve simple weather forecast for a given time and location.",
+  "version": "1.0.0",
+  "description": "retrieve a weather forecast for a given time and location from met.no",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && npm run unit && npm run coverage",
+    "lint": "npm run eslint && npm run linelint",
+    "eslint": "eslint index.js test/*.js",
+    "linelint": "linelint -l 120 index.js test/*.js",
+    "unit": "NODE_PATH=. mocha test/",
+    "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
+    "coverage": "NODE_PATH=. nyc mocha test/ && nyc report --reporter=lcov"
   },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
-    "yr.no-interface": "0.1.1",
-    "moment": "2.4.0",
-    "xml2js": "0.2.8",
-    "async": "0.2.9"
+    "bluebird": "~3.5.0",
+    "debug": "~2.6.3",
+    "lodash.filter": "~4.6.0",
+    "lodash.foreach": "~4.5.0",
+    "moment": "~2.4.0",
+    "pixl-xml": "~1.0.10",
+    "verror": "~1.9.0",
+    "yr.no-interface": "~0.1.1"
   },
   "license": "MIT",
   "repository": {
@@ -23,7 +36,27 @@
     "met",
     "weather",
     "Meteorologisk",
-    "NRK"
+    "NRK",
+    "yr",
+    "no",
+    "met.no",
+    "api.met.no",
+    "forecast"
   ],
-  "author": "Evan Shortiss"
+  "engines": {
+    "node": ">=4.4.2"
+  },
+  "author": "Evan Shortiss",
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "chai-truthy": "~1.0.0",
+    "coveralls": "~2.13.0",
+    "eslint": "~3.19.0",
+    "linelint": "~1.0.1",
+    "mocha": "~3.2.0",
+    "nyc": "~10.2.0",
+    "proxyquire": "~1.7.11",
+    "require-uncached": "~1.0.3",
+    "sinon": "~2.1.0"
+  }
 }

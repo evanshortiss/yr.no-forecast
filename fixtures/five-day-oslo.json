@@ -1,0 +1,139 @@
+[
+  {
+    "icon": "PartlyCloud",
+    "to": "2017-04-18T12:00:00Z",
+    "from": "2017-04-18T11:00:00Z",
+    "rain": "0.0 mm",
+    "temperature": "6.0 celsius",
+    "windDirection": {
+      "deg": "200.7",
+      "name": "S"
+    },
+    "windSpeed": {
+      "mps": "1.5",
+      "beaufort": "1",
+      "name": "Flau vind"
+    },
+    "windGust": {
+      "mps": "3.7"
+    },
+    "humidity": "63.5 percent",
+    "pressure": "1033.6 hPa",
+    "cloudiness": "72.6%",
+    "fog": "0.0%",
+    "lowClouds": "72.6%",
+    "mediumClouds": "0.0%",
+    "highClouds": "0.0%",
+    "temperatureProbability": "0 probabilitycode",
+    "windProbability": "0 probabilitycode",
+    "dewpointTemperature": "-0.6 celsius"
+  },
+  {
+    "icon": "Cloud",
+    "to": "2017-04-19T12:00:00Z",
+    "from": "2017-04-19T11:00:00Z",
+    "rain": "0.0 mm",
+    "temperature": "8.5 celsius",
+    "windDirection": {
+      "deg": "201.9",
+      "name": "S"
+    },
+    "windSpeed": {
+      "mps": "5.0",
+      "beaufort": "3",
+      "name": "Lett bris"
+    },
+    "windGust": {
+      "mps": "7.3"
+    },
+    "humidity": "69.8 percent",
+    "pressure": "1033.5 hPa",
+    "cloudiness": "100.0%",
+    "fog": "0.0%",
+    "lowClouds": "34.1%",
+    "mediumClouds": "1.6%",
+    "highClouds": "99.9%",
+    "temperatureProbability": "0 probabilitycode",
+    "windProbability": "0 probabilitycode",
+    "dewpointTemperature": "3.2 celsius"
+  },
+  {
+    "icon": "Cloud",
+    "to": "2017-04-20T12:00:00Z",
+    "from": "2017-04-20T11:00:00Z",
+    "rain": "0.0 mm",
+    "temperature": "10.9 celsius",
+    "windDirection": {
+      "deg": "202.4",
+      "name": "S"
+    },
+    "windSpeed": {
+      "mps": "6.6",
+      "beaufort": "4",
+      "name": "Laber bris"
+    },
+    "windGust": {
+      "mps": "9.5"
+    },
+    "humidity": "73.5 percent",
+    "pressure": "1019.8 hPa",
+    "cloudiness": "99.8%",
+    "fog": "0.0%",
+    "lowClouds": "4.8%",
+    "mediumClouds": "89.3%",
+    "highClouds": "98.1%",
+    "temperatureProbability": "1 probabilitycode",
+    "windProbability": "0 probabilitycode",
+    "dewpointTemperature": "6.3 celsius"
+  },
+  {
+    "icon": "PartlyCloud",
+    "to": "2017-04-21T12:00:00Z",
+    "from": "2017-04-21T06:00:00Z",
+    "rain": "0.0 mm",
+    "temperature": "10.3 celsius",
+    "windDirection": {
+      "deg": "281.8",
+      "name": "W"
+    },
+    "windSpeed": {
+      "mps": "6.3",
+      "beaufort": "4",
+      "name": "Laber bris"
+    },
+    "humidity": "29.2 percent",
+    "pressure": "1002.0 hPa",
+    "cloudiness": "79.7%",
+    "lowClouds": "0.0%",
+    "mediumClouds": "74.6%",
+    "highClouds": "0.8%",
+    "temperatureProbability": "1 probabilitycode",
+    "windProbability": "0 probabilitycode",
+    "dewpointTemperature": "-7.2 celsius"
+  },
+  {
+    "icon": "PartlyCloud",
+    "to": "2017-04-22T12:00:00Z",
+    "from": "2017-04-22T06:00:00Z",
+    "rain": "0.0 mm",
+    "temperature": "9.9 celsius",
+    "windDirection": {
+      "deg": "327.2",
+      "name": "NW"
+    },
+    "windSpeed": {
+      "mps": "5.7",
+      "beaufort": "4",
+      "name": "Laber bris"
+    },
+    "humidity": "31.5 percent",
+    "pressure": "1005.7 hPa",
+    "cloudiness": "73.4%",
+    "lowClouds": "0.0%",
+    "mediumClouds": "58.6%",
+    "highClouds": "12.5%",
+    "temperatureProbability": "1 probabilitycode",
+    "windProbability": "1 probabilitycode",
+    "dewpointTemperature": "-6.5 celsius"
+  }
+]
