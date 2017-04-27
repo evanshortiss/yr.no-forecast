@@ -16,7 +16,7 @@ Here's an example:
 
 ```js
 const yrno = require('yr.no-forecast')({
-  version: '1.9'
+  version: '1.9' // this is the default if not provided
 });
 
 const LOCATION = {
@@ -51,7 +51,7 @@ Currently supported config options:
 * version - This will be passed when making a call to the met.no API
 
 
-### module.getWeather(params, [version])
+### module.getWeather(params)
 Returns a Promise that will resolve with a `LocationForecast` object that
 contains functions to get weather data.
 
