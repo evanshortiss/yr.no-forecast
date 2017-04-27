@@ -41,6 +41,9 @@
     "no",
     "met.no"
   ],
+  "engines": {
+    "node": ">=4.4.2"
+  },
   "author": "Evan Shortiss",
   "devDependencies": {
     "chai": "~3.5.0",
