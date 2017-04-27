@@ -1,6 +1,8 @@
 yr.no-forecast
 ==============
 
+![TravisCI](https://travis-ci.org/evanshortiss/yr.no-forecast.svg) [![npm version](https://badge.fury.io/js/yr.no-forecast.svg)](https://badge.fury.io/js/yr.no-forecast) [![Coverage Status](https://coveralls.io/repos/github/evanshortiss/yr.no-forecast/badge.svg?branch=master)](https://coveralls.io/github/evanshortiss/yr.no-forecast?branch=master)
+
 Wrapper to easily get weather data for a specified location in JSON format. Uses [yr.no-interface](https://github.com/evanshortiss/yr.no-interface) under the
 hood. See the API docs at [yr.no](http://api.yr.no/weatherapi/locationforecast/1.9/documentation).
 
