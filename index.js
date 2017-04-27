@@ -1,67 +1,89 @@
-// Copyright 2013 Evan Shortiss
-//
-//    Licensed under the Apache License, Version 2.0 (the "License");
-//    you may not use this file except in compliance with the License.
-//    You may obtain a copy of the License at
-//
-//        http://www.apache.org/licenses/LICENSE-2.0
-//
-//    Unless required by applicable law or agreed to in writing, software
-//    distributed under the License is distributed on an "AS IS" BASIS,
-//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//    See the License for the specific language governing permissions and
-//    limitations under the License.
+'use strict';
 
-module.exports = {
-  getWeather: getWeather
+const log = require('debug')(require('./package.json').name);
+const yrno = require('yr.no-interface');
+const moment = require('moment');
+const XML = require('pixl-xml');
+const VError = require('verror');
+const filter = require('lodash.filter');
+const each = require('lodash.foreach');
+const Promise = require('bluebird');
+
+module.exports = (config) => {
+  // Make a default config, but extend it with the passed config
+  config = Object.assign({version: 1.9}, config);
+
+  return {
+    /**
+     * Public call to get a LocationForecast instance.
+     * Version is optional.
+     * @param {Object}    params
+     * @param {String}    [version]
+     */
+
+    getWeather: (params, version) => {
+      version = version || config.version;
+
+      log('requesting a locationforecast using API version %s', version);
+
+      return Promise.fromCallback(function (callback) {
+        // Make a standard call to the API
+        yrno.locationforecast(params, version, function(err, body) {
+          if (err) {
+            log('failed to get locationforecast from yr.no API. Error:', err);
+            return callback(err, null);
+          }
+
+
+          log('successfully retrieved locationforecast report from yr.no');
+
+          // Wrap the response from API
+          callback(null, new LocationForecast(body));
+        });
+      });
+    }
+
+  };
 };
-
-var yrno = require('yr.no-interface'),
-  moment = require('moment'),
-  async = require('async'),
-  xml2js = require('xml2js');
 
 /**
  * @constructor
- * @param {String}    xml
- * @param {Function}  callback
+ * @param {String} xml
  */
-
-function LocationForecast(xml, callback) {
+function LocationForecast(xml) {
   this.xml = xml;
   this.basic = [];
   this.detail = [];
 
+  log('building LocationForecast object by parsing xml to JSON');
+
+  var startDt = Date.now();
+
   // Parse to JSON and return this object on success
-  var self = this;
-  new xml2js.Parser({
-    async: true,
-    mergeAttrs: true,
-    explicitArray: false
-  }).parseString(xml, function(err, json) {
-    if (err) {
-      return callback('Failed to parse yr.no xml to json', null);
-    }
-    self.json = json;
-    self._init(callback);
-  });
+  try {
+    this.json = XML.parse(xml, {preserveDocumentNode: true});
+    log('parsing xml to json took %dms', Date.now() - startDt);
+  } catch (e) {
+    throw new VError(e, 'failed to parse returned xml string to JSON');
+  }
+
+  this._init();
+
+  log('LocationForecast init complete in %sms', Date.now() - startDt);
+
+  return this;
 }
 
 LocationForecast.prototype = {
-  _init: function(callback) {
+  _init: function () {
     var self = this;
-    var json = this.json;
 
-    async.forEach(json['weatherdata']['product']['time'], function(time, cb) {
-      // Forecast data with a symbol is a basic summary
-      if (time['location']['symbol']) {
+    each(this.json.weatherdata.product.time, function (time) {
+      if (time.location.symbol) {
         self.basic.push(time);
       } else {
         self.detail.push(time);
       }
-      cb();
-    }, function() {
-      return callback(null, self);
     });
   },
 
@@ -82,43 +104,31 @@ LocationForecast.prototype = {
   },
 
 
+  getFirstDateInPayload: function () {
+    return this.json.weatherdata.product.time[0].from;
+  },
+
+
   /**
    * Get five day weather.
    * @param {Function} callback
    */
-  getFiveDaySummary: function(callback) {
-    var self = this;
-    var fns = [];
-    // Use miday for forecast
-    var curDate = moment.utc().hours(12);
-    curDate.set('minutes', 0);
+  getFiveDaySummary: function() {
+    log('getting five day summary');
 
-    // Create 5 days of dates
-    for (var i = 0; i < 5; i++) {
-      // Avoid scope error for wrong day reference
-      (function() {
-        var day = curDate.clone();
-        day = day.add('days', i);
-        fns.push(function(cb) {
-          self.getForecastForTime(day, function(err, weather) {
-            if (err) {
-              return cb(err, null);
-            }
+    var firstDate = moment.utc(this.getFirstDateInPayload()).hours(12);
 
-            return cb(null, weather);
-          })
-        });
-      })()
-    }
-
-    // Run tasks and return weather array
-    async.series(fns, function(err, res) {
-      if (err) {
-        return callback(err, null);
-      }
-      
-      return callback(null, res);
-    });
+    return Promise.all([
+      this.getForecastForTime(firstDate),
+      this.getForecastForTime(firstDate.clone().add('days', 1)),
+      this.getForecastForTime(firstDate.clone().add('days', 2)),
+      this.getForecastForTime(firstDate.clone().add('days', 3)),
+      this.getForecastForTime(firstDate.clone().add('days', 4))
+    ])
+      .then(function (results) {
+        // Return a single array of objects
+        return Array.prototype.concat.apply([], results);
+      });
   },
 
 
@@ -127,36 +137,95 @@ LocationForecast.prototype = {
    * @param {String|Date} time
    * @param {Function}    callback
    */
-  getForecastForTime: function(time, callback) {
+  getForecastForTime: function(time) {
     var self = this;
 
     time = moment.utc(time);
+
     if (time.isValid() === false) {
-      return callback('Invalid date provided for weather lookup. Date: ' + time);
+      return Promise.reject(
+        new Error('Invalid date provided for weather lookup')
+      );
     }
 
-    getBasicForTime(time, self.basic, function(err, basic) {
-      if (!basic) {
-        return callback(null, {});
-      }
+    log('getting forecast for time %s', time);
 
-      getDetailForTime(time, self.detail, function(err, detail) {
-        if (detail) {
-          return callback(null, buildDetail(detail, basic));
-        }
-        return callback(null, res);
+    return Promise.resolve()
+      .then(function () {
+        return buildDetail(
+          self.getDetailForTime(time),
+          self.getBasicForTime(time)
+        );
       });
-    });
   },
-
 
   /**
-   * Get basic summary for current time.
-   * @param {Function} callback
+   * Get basic items for a time.
+   * Find nearest hour on same day, or no result.
+   * @param {String|Object}
+   * @param {Function}
    */
-  getCurrentSummary: function(callback) {
-    this.getForecastForTime(Date.now(), callback);
+  getBasicForTime: function (date) {
+    date = moment.utc(date);
+
+    log('getBasicForTime %s', date);
+
+    // Used to find closest time to one provided
+    var maxDifference = Infinity;
+    var res = null;
+    var items = getItemsForDay(this.basic, date);
+    var len = items.length;
+    var i = 0;
+
+    while (i < len) {
+      var to = moment.utc(items[i].to);
+      var from = moment.utc(items[i].from);
+
+      // Check the date falls in range
+      if ((from.isSame(date) || from.isBefore(date)) && (to.isSame(date) || to.isAfter(date))) {
+        var diff = Math.abs(to.diff(from));
+        if (diff < maxDifference) {
+          maxDifference = diff;
+          res = items[i];
+        }
+      }
+
+      i++;
+    }
+
+    return res || fallbackSelector(date, this.basic);
   },
+
+  /**
+   * Get detailed items for a time.
+   * Find nearest hour on same day, or no result.
+   * @param {String|Object}
+   * @param {Function}
+   */
+  getDetailForTime: function (date) {
+    date = moment.utc(date);
+
+    log('getDetailForTime %s', date);
+
+    // Used to find closest time to one provided
+    var maxDifference = Infinity;
+    var res = null;
+    var itemsForDay = getItemsForDay(this.detail, date);
+    var len = itemsForDay.length;
+    var i = 0;
+
+    while (i < len) {
+      var diff = Math.abs(moment.utc(itemsForDay[i].to).diff(date));
+      if (diff < maxDifference) {
+        maxDifference = diff;
+        res = itemsForDay[i];
+      }
+
+      i++;
+    }
+
+    return res || fallbackSelector(date, this.detail);
+  }
 };
 
 
@@ -182,10 +251,10 @@ function buildDetail(detail, basic) {
   // </location>
 
   var obj = {
-    icon: basic['location']['symbol']['id'],
-    to: basic['to'],
-    from: basic['from'],
-    rain: (basic['location']['precipitation']['value'] + ' ' + basic['location']['precipitation']['unit'])
+    icon: basic.location.symbol.id,
+    to: basic.to,
+    from: basic.from,
+    rain: basic.location.precipitation.value + ' ' + basic.location.precipitation.unit
   };
 
   // Corresponds to XML 'location' element
@@ -199,13 +268,13 @@ function buildDetail(detail, basic) {
     // Type 2: Has only "percent"
     // Type 3: Has multiple properties where the name is the value
     if (cur.hasOwnProperty('value')) {
-      obj[key] = cur['value'] + ' ' + cur['unit'];
+      obj[key] = cur.value + ' ' + cur.unit;
     } else if (cur.hasOwnProperty('percent')) {
-      obj[key] = cur['percent'] + '%';
+      obj[key] = cur.percent + '%';
     } else if (typeof cur === 'object') {
       obj[key] = {};
       for (var nestedKey in cur) {
-        if (nestedKey != 'id') {
+        if (nestedKey !== 'id') {
           obj[key][nestedKey] = cur[nestedKey];
         }
       }
@@ -217,135 +286,27 @@ function buildDetail(detail, basic) {
 
 
 /**
- * Public call to easily get weather object.
- * @param {Object}    params
- * @param {Callback}  callback
- * @param {String}    version
- */
-
-function getWeather(params, callback, version) {
-  version = version || 1.9;
-
-  // Make a standard call to the API
-  yrno.locationforecast(params, version, function(err, body) {
-    if (err) {
-      return callback(err, null);
-    }
-
-    // Wrap the response from API
-    new LocationForecast(body, callback);
-  });
-}
-
-
-/**
  * Used when no matching element is found for a time of a day.
  * @param   {Date}      time
  * @param   {Array}     collection
- * @param   {Function}  callback
  */
-function fallbackSelector(time, collection, callback) {
-  time = moment(time);
+function fallbackSelector(time, collection) {
+  time = moment.utc(time);
 
-  // Find out is time before or after collection range
   var isBefore = false;
-  async.each(collection, function(item, cb) {
-    if(time.isBefore(moment(item.to))) {
+  var len = collection.length;
+  var i = 0;
+
+  while (i < len) {
+    if (time.isBefore(moment(collection[i].to))) {
       isBefore = true;
-      return cb(true);
+      i = len;
     }
 
-    cb();
-  }, function() {
-    // Take earlist time possbile
-    if(isBefore == true) {
-      return callback(null, collection[0]);
-    }
+    i++;
+  }
 
-    // Take latest time possible
-    return callback(null, collection[collection.length-1]);
-  });
-}
-
-
-/**
- * Get detailed items for a time.
- * Find nearest hour on same day, or no result.
- * @param {String|Object}
- * @param {Function}
- */
-
-function getDetailForTime(date, detail, callback) {
-  date = moment.utc(date);
-
-  // Used to find closest time to one provided
-  var maxDifference = Infinity;
-  var res = null;
-
-  // Get any detail items for the date
-  getItemsForDay(detail, date, function(err, items) {
-    // Find the one closest to our time
-    async.each(items, function(item, cb) {
-      // Only look at 'to' as it and 'from' are same
-      var diff = Math.abs(moment.utc(item.to).diff(date));
-      if (diff < maxDifference) {
-        maxDifference = diff;
-        res = item;
-      }
-      cb();
-    }, function() {
-      if(res == null) {
-        return fallbackSelector(date, detail, callback);
-      }
-
-      return callback(null, res);
-    });
-  });
-}
-
-
-/**
- * Get basic items for a time.
- * Find nearest hour on same day, or no result.
- * @param {String|Object}
- * @param {Function}
- */
-
-function getBasicForTime(date, basic, callback) {
-  date = moment.utc(date);
-
-  // Used to find closest time to one provided
-  var maxDifference = Infinity;
-  var res = null;
-
-  // Variables used in loop
-  var to, from;
-
-  // Get any detail items for the date
-  getItemsForDay(basic, date, function(err, items) {
-    // Find times that have small range 'from' to 'to'
-    // That our provided time falls between
-    async.each(items, function(item, cb) {
-      to = moment.utc(item.to);
-      from = moment.utc(item.from);
-
-      // Check the date falls in range
-      if ((from.isSame(date) || from.isBefore(date)) && (to.isSame(date) || to.isAfter(date))) {
-        var diff = Math.abs(to.diff(from));
-        if (diff < maxDifference) {
-          maxDifference = diff;
-          res = item;
-        }
-      }
-      cb();
-    }, function() {
-      if(res == null) {
-        return fallbackSelector(date, basic, callback);
-      }
-
-      return callback(null, res);
-    });
-  });
+  return isBefore ? collection[0] : collection[collection.length - 1];
 }
 
 
@@ -353,19 +314,15 @@ function getBasicForTime(date, basic, callback) {
  * Provides detailed forecasts for a given date.
  * @param {Array}         collection
  * @param {String|Object} date
- * @param {Function}      callback
  */
 
-function getItemsForDay(collection, date, callback) {
+function getItemsForDay(collection, date) {
   date = moment.utc(date);
 
-  var res = [];
-  async.each(collection, function(item, cb) {
-    if (moment.utc(item.from).isSame(date, 'day') || moment.utc(item.to).isSame(date, 'day')) {
-      res.push(item);
-    }
-    cb();
-  }, function(err) {
-    return callback(null, res);
+  return filter(collection, function (item) {
+    return (
+      moment.utc(item.from).isSame(date, 'day') ||
+      moment.utc(item.to).isSame(date, 'day')
+    );
   });
 }

@@ -1,0 +1,3359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weatherdata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.met.no/weatherapi/locationforecast/1.9/schema" created="2017-04-18T02:39:45Z">
+  <meta>
+    <model name="LOCAL" termin="2017-04-18T00:00:00Z" runended="2017-04-18T02:12:22Z" nextrun="2017-04-18T04:00:00Z" from="2017-04-18T03:00:00Z" to="2017-04-20T18:00:00Z" />
+    <model name="EPS" termin="2017-04-17T12:00:00Z" runended="2017-04-17T21:03:19Z" nextrun="2017-04-18T10:00:00Z" from="2017-04-21T00:00:00Z" to="2017-04-27T06:00:00Z" />
+  </meta>
+  <product class="pointData">
+    <time datatype="forecast" from="2017-04-18T03:00:00Z" to="2017-04-18T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.9" />
+        <windDirection id="dd" deg="14.6" name="N" />
+        <windSpeed id="ff" mps="1.5" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.4" />
+        <humidity value="78.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.1" />
+        <cloudiness id="NN" percent="15.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="15.4" />
+        <mediumClouds id="MEDIUM" percent="0.8" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-4.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T02:00:00Z" to="2017-04-18T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T01:00:00Z" to="2017-04-18T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T00:00:00Z" to="2017-04-18T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T04:00:00Z" to="2017-04-18T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-1.2" />
+        <windDirection id="dd" deg="18.4" name="N" />
+        <windSpeed id="ff" mps="2.0" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.8" />
+        <humidity value="82.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.7" />
+        <cloudiness id="NN" percent="0.1" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.1" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-4.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T03:00:00Z" to="2017-04-18T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T02:00:00Z" to="2017-04-18T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T01:00:00Z" to="2017-04-18T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T05:00:00Z" to="2017-04-18T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.8" />
+        <windDirection id="dd" deg="39.8" name="NE" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.8" />
+        <humidity value="82.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1031.3" />
+        <cloudiness id="NN" percent="1.5" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="1.4" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.7" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T04:00:00Z" to="2017-04-18T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T03:00:00Z" to="2017-04-18T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T02:00:00Z" to="2017-04-18T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-17T23:00:00Z" to="2017-04-18T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450" />
+    </time>
+    <time datatype="forecast" from="2017-04-18T06:00:00Z" to="2017-04-18T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="0.2" />
+        <windDirection id="dd" deg="64.4" name="NE" />
+        <windSpeed id="ff" mps="2.3" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.7" />
+        <humidity value="78.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1032.0" />
+        <cloudiness id="NN" percent="2.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="2.4" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T05:00:00Z" to="2017-04-18T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T04:00:00Z" to="2017-04-18T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T03:00:00Z" to="2017-04-18T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T00:00:00Z" to="2017-04-18T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="0.2" />
+        <symbol id="LightCloud" number="2" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T07:00:00Z" to="2017-04-18T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.5" />
+        <windDirection id="dd" deg="72.7" name="E" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.9" />
+        <humidity value="76.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1032.6" />
+        <cloudiness id="NN" percent="1.8" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="1.8" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T06:00:00Z" to="2017-04-18T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T05:00:00Z" to="2017-04-18T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T04:00:00Z" to="2017-04-18T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T01:00:00Z" to="2017-04-18T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="1.5" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T08:00:00Z" to="2017-04-18T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.8" />
+        <windDirection id="dd" deg="127.4" name="SE" />
+        <windSpeed id="ff" mps="1.3" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="3.3" />
+        <humidity value="74.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.1" />
+        <cloudiness id="NN" percent="26.1" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="26.1" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T07:00:00Z" to="2017-04-18T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T06:00:00Z" to="2017-04-18T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T05:00:00Z" to="2017-04-18T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T02:00:00Z" to="2017-04-18T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="2.8" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T09:00:00Z" to="2017-04-18T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.9" />
+        <windDirection id="dd" deg="195.2" name="S" />
+        <windSpeed id="ff" mps="1.7" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.3" />
+        <humidity value="74.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.4" />
+        <cloudiness id="NN" percent="53.3" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="53.3" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T08:00:00Z" to="2017-04-18T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T07:00:00Z" to="2017-04-18T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T06:00:00Z" to="2017-04-18T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T03:00:00Z" to="2017-04-18T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="3.9" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T10:00:00Z" to="2017-04-18T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.6" />
+        <windDirection id="dd" deg="198.7" name="S" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.5" />
+        <humidity value="70.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.5" />
+        <cloudiness id="NN" percent="59.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="59.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T09:00:00Z" to="2017-04-18T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T08:00:00Z" to="2017-04-18T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T07:00:00Z" to="2017-04-18T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T04:00:00Z" to="2017-04-18T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="-1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="4.6" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T11:00:00Z" to="2017-04-18T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.4" />
+        <windDirection id="dd" deg="214.7" name="SW" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.8" />
+        <humidity value="67.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.5" />
+        <cloudiness id="NN" percent="66.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="66.4" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T10:00:00Z" to="2017-04-18T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T09:00:00Z" to="2017-04-18T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T08:00:00Z" to="2017-04-18T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T05:00:00Z" to="2017-04-18T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="-0.8" />
+        <maxTemperature id="TTT" unit="celsius" value="5.4" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T12:00:00Z" to="2017-04-18T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.0" />
+        <windDirection id="dd" deg="200.7" name="S" />
+        <windSpeed id="ff" mps="1.5" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="3.7" />
+        <humidity value="63.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.6" />
+        <cloudiness id="NN" percent="72.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="72.6" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T11:00:00Z" to="2017-04-18T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T10:00:00Z" to="2017-04-18T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T09:00:00Z" to="2017-04-18T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T06:00:00Z" to="2017-04-18T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="0.2" />
+        <maxTemperature id="TTT" unit="celsius" value="6.0" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T13:00:00Z" to="2017-04-18T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.3" />
+        <windDirection id="dd" deg="131.6" name="SE" />
+        <windSpeed id="ff" mps="1.3" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="3.0" />
+        <humidity value="60.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.6" />
+        <cloudiness id="NN" percent="50.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="50.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T12:00:00Z" to="2017-04-18T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T11:00:00Z" to="2017-04-18T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T10:00:00Z" to="2017-04-18T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T07:00:00Z" to="2017-04-18T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="1.5" />
+        <maxTemperature id="TTT" unit="celsius" value="6.3" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T14:00:00Z" to="2017-04-18T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.4" />
+        <windDirection id="dd" deg="141.3" name="SE" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.1" />
+        <humidity value="60.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.3" />
+        <cloudiness id="NN" percent="28.5" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="28.5" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T13:00:00Z" to="2017-04-18T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T12:00:00Z" to="2017-04-18T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T11:00:00Z" to="2017-04-18T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T08:00:00Z" to="2017-04-18T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.2" />
+        <minTemperature id="TTT" unit="celsius" value="2.8" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T15:00:00Z" to="2017-04-18T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.4" />
+        <windDirection id="dd" deg="150.4" name="SE" />
+        <windSpeed id="ff" mps="1.7" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.1" />
+        <humidity value="59.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.1" />
+        <cloudiness id="NN" percent="20.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="20.3" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.4" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T14:00:00Z" to="2017-04-18T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T13:00:00Z" to="2017-04-18T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T12:00:00Z" to="2017-04-18T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T09:00:00Z" to="2017-04-18T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.2" />
+        <minTemperature id="TTT" unit="celsius" value="3.9" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T16:00:00Z" to="2017-04-18T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.3" />
+        <windDirection id="dd" deg="166.7" name="S" />
+        <windSpeed id="ff" mps="1.2" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.6" />
+        <humidity value="59.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.1" />
+        <cloudiness id="NN" percent="33.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="5.2" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="30.1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T15:00:00Z" to="2017-04-18T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T14:00:00Z" to="2017-04-18T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T13:00:00Z" to="2017-04-18T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T10:00:00Z" to="2017-04-18T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="4.6" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T17:00:00Z" to="2017-04-18T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.8" />
+        <windDirection id="dd" deg="232.2" name="SW" />
+        <windSpeed id="ff" mps="0.6" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.8" />
+        <humidity value="66.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.1" />
+        <cloudiness id="NN" percent="36.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="36.4" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T16:00:00Z" to="2017-04-18T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T15:00:00Z" to="2017-04-18T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T14:00:00Z" to="2017-04-18T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T11:00:00Z" to="2017-04-18T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="5.4" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T18:00:00Z" to="2017-04-18T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.9" />
+        <windDirection id="dd" deg="257.4" name="W" />
+        <windSpeed id="ff" mps="1.0" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.3" />
+        <humidity value="66.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.4" />
+        <cloudiness id="NN" percent="5.3" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="5.3" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T17:00:00Z" to="2017-04-18T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T16:00:00Z" to="2017-04-18T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T15:00:00Z" to="2017-04-18T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T12:00:00Z" to="2017-04-18T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.1" />
+        <minTemperature id="TTT" unit="celsius" value="4.9" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="LightCloud" number="2" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T19:00:00Z" to="2017-04-18T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.1" />
+        <windDirection id="dd" deg="238.9" name="SW" />
+        <windSpeed id="ff" mps="1.2" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.5" />
+        <humidity value="65.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.8" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T18:00:00Z" to="2017-04-18T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T17:00:00Z" to="2017-04-18T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T16:00:00Z" to="2017-04-18T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T13:00:00Z" to="2017-04-18T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="4.1" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T20:00:00Z" to="2017-04-18T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.0" />
+        <windDirection id="dd" deg="242.4" name="SW" />
+        <windSpeed id="ff" mps="1.6" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.2" />
+        <humidity value="79.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.0" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T19:00:00Z" to="2017-04-18T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T18:00:00Z" to="2017-04-18T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T17:00:00Z" to="2017-04-18T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T14:00:00Z" to="2017-04-18T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.0" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T21:00:00Z" to="2017-04-18T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.6" />
+        <windDirection id="dd" deg="249.7" name="W" />
+        <windSpeed id="ff" mps="0.9" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.0" />
+        <humidity value="72.7" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.4" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T20:00:00Z" to="2017-04-18T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T19:00:00Z" to="2017-04-18T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T18:00:00Z" to="2017-04-18T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T15:00:00Z" to="2017-04-18T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.6" />
+        <maxTemperature id="TTT" unit="celsius" value="6.4" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T22:00:00Z" to="2017-04-18T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="0.7" />
+        <windDirection id="dd" deg="155.7" name="SE" />
+        <windSpeed id="ff" mps="0.6" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.4" />
+        <humidity value="73.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.9" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T21:00:00Z" to="2017-04-18T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T20:00:00Z" to="2017-04-18T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T19:00:00Z" to="2017-04-18T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T16:00:00Z" to="2017-04-18T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.7" />
+        <maxTemperature id="TTT" unit="celsius" value="6.3" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T23:00:00Z" to="2017-04-18T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="0.2" />
+        <windDirection id="dd" deg="135.3" name="SE" />
+        <windSpeed id="ff" mps="1.5" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.2" />
+        <humidity value="85.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.3" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T22:00:00Z" to="2017-04-18T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T21:00:00Z" to="2017-04-18T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T20:00:00Z" to="2017-04-18T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T17:00:00Z" to="2017-04-18T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.2" />
+        <maxTemperature id="TTT" unit="celsius" value="5.8" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T00:00:00Z" to="2017-04-19T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="0.1" />
+        <windDirection id="dd" deg="108.2" name="E" />
+        <windSpeed id="ff" mps="1.4" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.0" />
+        <humidity value="88.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.3" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T23:00:00Z" to="2017-04-19T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T22:00:00Z" to="2017-04-19T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T21:00:00Z" to="2017-04-19T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T18:00:00Z" to="2017-04-19T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.1" />
+        <maxTemperature id="TTT" unit="celsius" value="4.9" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T01:00:00Z" to="2017-04-19T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.2" />
+        <windDirection id="dd" deg="104.1" name="E" />
+        <windSpeed id="ff" mps="1.6" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.3" />
+        <humidity value="90.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.9" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.7" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T00:00:00Z" to="2017-04-19T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T23:00:00Z" to="2017-04-19T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T22:00:00Z" to="2017-04-19T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T19:00:00Z" to="2017-04-19T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.2" />
+        <maxTemperature id="TTT" unit="celsius" value="4.1" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T02:00:00Z" to="2017-04-19T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.2" />
+        <windDirection id="dd" deg="119.9" name="SE" />
+        <windSpeed id="ff" mps="2.0" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.8" />
+        <humidity value="90.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.7" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T01:00:00Z" to="2017-04-19T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T00:00:00Z" to="2017-04-19T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T23:00:00Z" to="2017-04-19T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T20:00:00Z" to="2017-04-19T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.2" />
+        <maxTemperature id="TTT" unit="celsius" value="2.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T03:00:00Z" to="2017-04-19T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.3" />
+        <windDirection id="dd" deg="130.4" name="SE" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.9" />
+        <humidity value="91.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.8" />
+        <cloudiness id="NN" percent="0.1" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.7" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T02:00:00Z" to="2017-04-19T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T01:00:00Z" to="2017-04-19T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T00:00:00Z" to="2017-04-19T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T21:00:00Z" to="2017-04-19T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="1.6" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T04:00:00Z" to="2017-04-19T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="-0.1" />
+        <windDirection id="dd" deg="120.2" name="SE" />
+        <windSpeed id="ff" mps="2.4" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.3" />
+        <humidity value="92.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.9" />
+        <cloudiness id="NN" percent="0.2" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.2" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T03:00:00Z" to="2017-04-19T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T02:00:00Z" to="2017-04-19T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T01:00:00Z" to="2017-04-19T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T22:00:00Z" to="2017-04-19T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="0.7" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T05:00:00Z" to="2017-04-19T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="0.5" />
+        <windDirection id="dd" deg="121.8" name="SE" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.4" />
+        <humidity value="91.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.1" />
+        <cloudiness id="NN" percent="0.3" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.3" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T04:00:00Z" to="2017-04-19T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T03:00:00Z" to="2017-04-19T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T02:00:00Z" to="2017-04-19T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-18T23:00:00Z" to="2017-04-19T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="0.5" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T06:00:00Z" to="2017-04-19T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.4" />
+        <windDirection id="dd" deg="112.1" name="E" />
+        <windSpeed id="ff" mps="1.5" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.8" />
+        <humidity value="89.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.4" />
+        <cloudiness id="NN" percent="0.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T05:00:00Z" to="2017-04-19T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T04:00:00Z" to="2017-04-19T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T03:00:00Z" to="2017-04-19T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T00:00:00Z" to="2017-04-19T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="1.4" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T07:00:00Z" to="2017-04-19T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.6" />
+        <windDirection id="dd" deg="118.2" name="SE" />
+        <windSpeed id="ff" mps="1.0" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.4" />
+        <humidity value="86.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.3" />
+        <cloudiness id="NN" percent="3.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="3.4" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T06:00:00Z" to="2017-04-19T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T05:00:00Z" to="2017-04-19T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T04:00:00Z" to="2017-04-19T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T01:00:00Z" to="2017-04-19T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="2.6" />
+        <symbol id="Sun" number="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T08:00:00Z" to="2017-04-19T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.9" />
+        <windDirection id="dd" deg="157.8" name="S" />
+        <windSpeed id="ff" mps="0.9" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.1" />
+        <humidity value="81.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1035.1" />
+        <cloudiness id="NN" percent="87.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="87.4" />
+        <dewpointTemperature id="TD" unit="celsius" value="1.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T07:00:00Z" to="2017-04-19T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T06:00:00Z" to="2017-04-19T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T05:00:00Z" to="2017-04-19T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T02:00:00Z" to="2017-04-19T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="3.9" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T09:00:00Z" to="2017-04-19T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.3" />
+        <windDirection id="dd" deg="204.0" name="SW" />
+        <windSpeed id="ff" mps="0.6" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.9" />
+        <humidity value="77.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.8" />
+        <cloudiness id="NN" percent="97.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="97.7" />
+        <dewpointTemperature id="TD" unit="celsius" value="1.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T08:00:00Z" to="2017-04-19T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T07:00:00Z" to="2017-04-19T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T06:00:00Z" to="2017-04-19T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T03:00:00Z" to="2017-04-19T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="5.3" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T10:00:00Z" to="2017-04-19T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.6" />
+        <windDirection id="dd" deg="203.8" name="SW" />
+        <windSpeed id="ff" mps="0.4" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.5" />
+        <humidity value="70.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1034.3" />
+        <cloudiness id="NN" percent="99.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.2" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="99.7" />
+        <dewpointTemperature id="TD" unit="celsius" value="1.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T09:00:00Z" to="2017-04-19T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T08:00:00Z" to="2017-04-19T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T07:00:00Z" to="2017-04-19T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T04:00:00Z" to="2017-04-19T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="-0.1" />
+        <maxTemperature id="TTT" unit="celsius" value="6.6" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T11:00:00Z" to="2017-04-19T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.2" />
+        <windDirection id="dd" deg="197.2" name="S" />
+        <windSpeed id="ff" mps="3.0" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="4.8" />
+        <humidity value="68.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.9" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="9.3" />
+        <mediumClouds id="MEDIUM" percent="0.1" />
+        <highClouds id="HIGH" percent="100.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="2.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T10:00:00Z" to="2017-04-19T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T09:00:00Z" to="2017-04-19T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T08:00:00Z" to="2017-04-19T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T05:00:00Z" to="2017-04-19T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.5" />
+        <maxTemperature id="TTT" unit="celsius" value="8.2" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T12:00:00Z" to="2017-04-19T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.5" />
+        <windDirection id="dd" deg="201.9" name="S" />
+        <windSpeed id="ff" mps="5.0" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="7.3" />
+        <humidity value="69.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1033.5" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="34.1" />
+        <mediumClouds id="MEDIUM" percent="1.6" />
+        <highClouds id="HIGH" percent="99.9" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="3.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T11:00:00Z" to="2017-04-19T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T10:00:00Z" to="2017-04-19T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T09:00:00Z" to="2017-04-19T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T06:00:00Z" to="2017-04-19T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.4" />
+        <maxTemperature id="TTT" unit="celsius" value="8.5" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T13:00:00Z" to="2017-04-19T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.7" />
+        <windDirection id="dd" deg="195.2" name="S" />
+        <windSpeed id="ff" mps="6.0" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="8.4" />
+        <humidity value="64.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1032.9" />
+        <cloudiness id="NN" percent="92.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="33.9" />
+        <mediumClouds id="MEDIUM" percent="0.2" />
+        <highClouds id="HIGH" percent="90.2" />
+        <dewpointTemperature id="TD" unit="celsius" value="2.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T12:00:00Z" to="2017-04-19T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T11:00:00Z" to="2017-04-19T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T10:00:00Z" to="2017-04-19T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T07:00:00Z" to="2017-04-19T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.6" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T14:00:00Z" to="2017-04-19T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.5" />
+        <windDirection id="dd" deg="191.5" name="S" />
+        <windSpeed id="ff" mps="7.7" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.5" />
+        <humidity value="67.7" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1032.2" />
+        <cloudiness id="NN" percent="63.9" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="20.4" />
+        <mediumClouds id="MEDIUM" percent="0.2" />
+        <highClouds id="HIGH" percent="51.6" />
+        <dewpointTemperature id="TD" unit="celsius" value="2.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T13:00:00Z" to="2017-04-19T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T12:00:00Z" to="2017-04-19T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T11:00:00Z" to="2017-04-19T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T08:00:00Z" to="2017-04-19T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.9" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T15:00:00Z" to="2017-04-19T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.3" />
+        <windDirection id="dd" deg="192.2" name="S" />
+        <windSpeed id="ff" mps="7.8" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.9" />
+        <humidity value="70.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1031.5" />
+        <cloudiness id="NN" percent="17.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="12.1" />
+        <mediumClouds id="MEDIUM" percent="0.1" />
+        <highClouds id="HIGH" percent="5.8" />
+        <dewpointTemperature id="TD" unit="celsius" value="3.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T14:00:00Z" to="2017-04-19T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="LightCloud" number="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T13:00:00Z" to="2017-04-19T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T12:00:00Z" to="2017-04-19T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T09:00:00Z" to="2017-04-19T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.3" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T16:00:00Z" to="2017-04-19T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="7.8" />
+        <windDirection id="dd" deg="187.0" name="S" />
+        <windSpeed id="ff" mps="7.5" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.5" />
+        <humidity value="74.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.9" />
+        <cloudiness id="NN" percent="66.9" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="24.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="61.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="3.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T15:00:00Z" to="2017-04-19T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T14:00:00Z" to="2017-04-19T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T13:00:00Z" to="2017-04-19T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T10:00:00Z" to="2017-04-19T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.6" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T17:00:00Z" to="2017-04-19T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.9" />
+        <windDirection id="dd" deg="182.6" name="S" />
+        <windSpeed id="ff" mps="7.3" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.2" />
+        <humidity value="78.7" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.6" />
+        <cloudiness id="NN" percent="91.9" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="34.3" />
+        <mediumClouds id="MEDIUM" percent="0.1" />
+        <highClouds id="HIGH" percent="87.4" />
+        <dewpointTemperature id="TD" unit="celsius" value="3.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T16:00:00Z" to="2017-04-19T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T15:00:00Z" to="2017-04-19T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T14:00:00Z" to="2017-04-19T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T11:00:00Z" to="2017-04-19T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.9" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T18:00:00Z" to="2017-04-19T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.9" />
+        <windDirection id="dd" deg="191.2" name="S" />
+        <windSpeed id="ff" mps="6.4" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.8" />
+        <humidity value="80.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.4" />
+        <cloudiness id="NN" percent="46.3" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="4.2" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="43.7" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="2.7" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T17:00:00Z" to="2017-04-19T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T16:00:00Z" to="2017-04-19T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T15:00:00Z" to="2017-04-19T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T12:00:00Z" to="2017-04-19T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.9" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T19:00:00Z" to="2017-04-19T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.8" />
+        <windDirection id="dd" deg="198.6" name="S" />
+        <windSpeed id="ff" mps="5.5" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="8.7" />
+        <humidity value="80.7" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.3" />
+        <cloudiness id="NN" percent="66.2" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="1.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="65.8" />
+        <dewpointTemperature id="TD" unit="celsius" value="1.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T18:00:00Z" to="2017-04-19T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T17:00:00Z" to="2017-04-19T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T16:00:00Z" to="2017-04-19T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T13:00:00Z" to="2017-04-19T19:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="4.8" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T20:00:00Z" to="2017-04-19T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.8" />
+        <windDirection id="dd" deg="221.9" name="SW" />
+        <windSpeed id="ff" mps="3.2" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="7.2" />
+        <humidity value="83.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.3" />
+        <cloudiness id="NN" percent="78.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.9" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="78.3" />
+        <dewpointTemperature id="TD" unit="celsius" value="1.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T19:00:00Z" to="2017-04-19T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T18:00:00Z" to="2017-04-19T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T17:00:00Z" to="2017-04-19T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T14:00:00Z" to="2017-04-19T20:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.8" />
+        <maxTemperature id="TTT" unit="celsius" value="8.5" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T21:00:00Z" to="2017-04-19T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.6" />
+        <windDirection id="dd" deg="225.7" name="SW" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="4.4" />
+        <humidity value="85.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1030.0" />
+        <cloudiness id="NN" percent="89.1" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.2" />
+        <mediumClouds id="MEDIUM" percent="0.6" />
+        <highClouds id="HIGH" percent="89.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T20:00:00Z" to="2017-04-19T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T19:00:00Z" to="2017-04-19T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T18:00:00Z" to="2017-04-19T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T15:00:00Z" to="2017-04-19T21:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.6" />
+        <maxTemperature id="TTT" unit="celsius" value="8.3" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T22:00:00Z" to="2017-04-19T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.0" />
+        <windDirection id="dd" deg="216.7" name="SW" />
+        <windSpeed id="ff" mps="1.4" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="2.4" />
+        <humidity value="82.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1029.7" />
+        <cloudiness id="NN" percent="89.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="14.0" />
+        <highClouds id="HIGH" percent="87.8" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T21:00:00Z" to="2017-04-19T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T20:00:00Z" to="2017-04-19T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T19:00:00Z" to="2017-04-19T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T16:00:00Z" to="2017-04-19T22:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.0" />
+        <maxTemperature id="TTT" unit="celsius" value="7.8" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T23:00:00Z" to="2017-04-19T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.5" />
+        <windDirection id="dd" deg="212.7" name="SW" />
+        <windSpeed id="ff" mps="1.5" beaufort="1" name="Flau vind" />
+        <windGust id="ff_gust" mps="1.9" />
+        <humidity value="80.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1029.3" />
+        <cloudiness id="NN" percent="99.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.1" />
+        <mediumClouds id="MEDIUM" percent="49.5" />
+        <highClouds id="HIGH" percent="99.3" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T22:00:00Z" to="2017-04-19T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T21:00:00Z" to="2017-04-19T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T20:00:00Z" to="2017-04-19T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T17:00:00Z" to="2017-04-19T23:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.5" />
+        <maxTemperature id="TTT" unit="celsius" value="6.9" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T00:00:00Z" to="2017-04-20T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.2" />
+        <windDirection id="dd" deg="180.5" name="S" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="2.5" />
+        <humidity value="79.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1028.5" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="2.6" />
+        <mediumClouds id="MEDIUM" percent="80.1" />
+        <highClouds id="HIGH" percent="100.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T23:00:00Z" to="2017-04-20T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T22:00:00Z" to="2017-04-20T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T21:00:00Z" to="2017-04-20T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T18:00:00Z" to="2017-04-20T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="5.9" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T01:00:00Z" to="2017-04-20T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.6" />
+        <windDirection id="dd" deg="182.5" name="S" />
+        <windSpeed id="ff" mps="2.6" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.4" />
+        <humidity value="78.7" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1027.8" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="18.2" />
+        <mediumClouds id="MEDIUM" percent="87.4" />
+        <highClouds id="HIGH" percent="100.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T00:00:00Z" to="2017-04-20T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T23:00:00Z" to="2017-04-20T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T22:00:00Z" to="2017-04-20T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T19:00:00Z" to="2017-04-20T01:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="4.8" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T02:00:00Z" to="2017-04-20T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.0" />
+        <windDirection id="dd" deg="170.6" name="S" />
+        <windSpeed id="ff" mps="2.9" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="3.9" />
+        <humidity value="80.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1027.0" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="42.1" />
+        <mediumClouds id="MEDIUM" percent="78.5" />
+        <highClouds id="HIGH" percent="100.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T01:00:00Z" to="2017-04-20T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T00:00:00Z" to="2017-04-20T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T23:00:00Z" to="2017-04-20T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T20:00:00Z" to="2017-04-20T02:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="3.8" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T03:00:00Z" to="2017-04-20T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.5" />
+        <windDirection id="dd" deg="182.7" name="S" />
+        <windSpeed id="ff" mps="3.1" beaufort="2" name="Svak vind" />
+        <windGust id="ff_gust" mps="4.1" />
+        <humidity value="77.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1026.4" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="75.5" />
+        <mediumClouds id="MEDIUM" percent="78.9" />
+        <highClouds id="HIGH" percent="100.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T02:00:00Z" to="2017-04-20T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T01:00:00Z" to="2017-04-20T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T00:00:00Z" to="2017-04-20T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T21:00:00Z" to="2017-04-20T03:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="2.6" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T04:00:00Z" to="2017-04-20T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.1" />
+        <windDirection id="dd" deg="179.0" name="S" />
+        <windSpeed id="ff" mps="3.8" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="5.2" />
+        <humidity value="78.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1025.7" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="82.9" />
+        <mediumClouds id="MEDIUM" percent="80.6" />
+        <highClouds id="HIGH" percent="99.9" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T03:00:00Z" to="2017-04-20T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T02:00:00Z" to="2017-04-20T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T01:00:00Z" to="2017-04-20T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T22:00:00Z" to="2017-04-20T04:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="3.1" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T05:00:00Z" to="2017-04-20T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.5" />
+        <windDirection id="dd" deg="164.2" name="S" />
+        <windSpeed id="ff" mps="4.3" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="5.9" />
+        <humidity value="81.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1025.0" />
+        <cloudiness id="NN" percent="99.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="46.1" />
+        <mediumClouds id="MEDIUM" percent="49.0" />
+        <highClouds id="HIGH" percent="99.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T04:00:00Z" to="2017-04-20T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T03:00:00Z" to="2017-04-20T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T02:00:00Z" to="2017-04-20T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-19T23:00:00Z" to="2017-04-20T05:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="3.5" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T06:00:00Z" to="2017-04-20T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.4" />
+        <windDirection id="dd" deg="180.0" name="S" />
+        <windSpeed id="ff" mps="3.8" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="5.8" />
+        <humidity value="79.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1024.2" />
+        <cloudiness id="NN" percent="98.5" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="10.7" />
+        <mediumClouds id="MEDIUM" percent="18.2" />
+        <highClouds id="HIGH" percent="98.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T05:00:00Z" to="2017-04-20T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T04:00:00Z" to="2017-04-20T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T03:00:00Z" to="2017-04-20T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T00:00:00Z" to="2017-04-20T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.2" />
+        <maxTemperature id="TTT" unit="celsius" value="4.4" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T07:00:00Z" to="2017-04-20T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.7" />
+        <windDirection id="dd" deg="189.5" name="S" />
+        <windSpeed id="ff" mps="4.5" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="6.3" />
+        <humidity value="78.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1023.5" />
+        <cloudiness id="NN" percent="96.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="7.6" />
+        <mediumClouds id="MEDIUM" percent="27.4" />
+        <highClouds id="HIGH" percent="95.3" />
+        <dewpointTemperature id="TD" unit="celsius" value="2.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T06:00:00Z" to="2017-04-20T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T05:00:00Z" to="2017-04-20T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T04:00:00Z" to="2017-04-20T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T01:00:00Z" to="2017-04-20T07:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.6" />
+        <maxTemperature id="TTT" unit="celsius" value="5.7" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T08:00:00Z" to="2017-04-20T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="7.2" />
+        <windDirection id="dd" deg="191.9" name="S" />
+        <windSpeed id="ff" mps="5.2" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="7.2" />
+        <humidity value="75.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1022.8" />
+        <cloudiness id="NN" percent="99.6" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="13.5" />
+        <mediumClouds id="MEDIUM" percent="53.1" />
+        <highClouds id="HIGH" percent="99.0" />
+        <dewpointTemperature id="TD" unit="celsius" value="3.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T07:00:00Z" to="2017-04-20T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T06:00:00Z" to="2017-04-20T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T05:00:00Z" to="2017-04-20T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T02:00:00Z" to="2017-04-20T08:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.0" />
+        <maxTemperature id="TTT" unit="celsius" value="7.2" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T09:00:00Z" to="2017-04-20T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.5" />
+        <windDirection id="dd" deg="193.6" name="S" />
+        <windSpeed id="ff" mps="5.7" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="7.9" />
+        <humidity value="74.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1022.1" />
+        <cloudiness id="NN" percent="99.4" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="12.6" />
+        <mediumClouds id="MEDIUM" percent="71.8" />
+        <highClouds id="HIGH" percent="97.6" />
+        <dewpointTemperature id="TD" unit="celsius" value="4.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T08:00:00Z" to="2017-04-20T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T07:00:00Z" to="2017-04-20T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T06:00:00Z" to="2017-04-20T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T03:00:00Z" to="2017-04-20T09:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.5" />
+        <maxTemperature id="TTT" unit="celsius" value="8.5" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T10:00:00Z" to="2017-04-20T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="9.4" />
+        <windDirection id="dd" deg="196.1" name="S" />
+        <windSpeed id="ff" mps="6.7" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.3" />
+        <humidity value="73.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1021.4" />
+        <cloudiness id="NN" percent="99.3" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="4.7" />
+        <mediumClouds id="MEDIUM" percent="69.3" />
+        <highClouds id="HIGH" percent="97.3" />
+        <dewpointTemperature id="TD" unit="celsius" value="4.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T09:00:00Z" to="2017-04-20T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T08:00:00Z" to="2017-04-20T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T07:00:00Z" to="2017-04-20T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T04:00:00Z" to="2017-04-20T10:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.1" />
+        <maxTemperature id="TTT" unit="celsius" value="9.4" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T11:00:00Z" to="2017-04-20T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="10.3" />
+        <windDirection id="dd" deg="199.3" name="S" />
+        <windSpeed id="ff" mps="7.0" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.6" />
+        <humidity value="73.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1020.7" />
+        <cloudiness id="NN" percent="99.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="2.6" />
+        <mediumClouds id="MEDIUM" percent="77.6" />
+        <highClouds id="HIGH" percent="97.3" />
+        <dewpointTemperature id="TD" unit="celsius" value="5.7" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T10:00:00Z" to="2017-04-20T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T09:00:00Z" to="2017-04-20T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T08:00:00Z" to="2017-04-20T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T05:00:00Z" to="2017-04-20T11:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.5" />
+        <maxTemperature id="TTT" unit="celsius" value="10.3" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T12:00:00Z" to="2017-04-20T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="10.9" />
+        <windDirection id="dd" deg="202.4" name="S" />
+        <windSpeed id="ff" mps="6.6" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.5" />
+        <humidity value="73.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1019.8" />
+        <cloudiness id="NN" percent="99.8" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="4.8" />
+        <mediumClouds id="MEDIUM" percent="89.3" />
+        <highClouds id="HIGH" percent="98.1" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="6.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T11:00:00Z" to="2017-04-20T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T10:00:00Z" to="2017-04-20T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T09:00:00Z" to="2017-04-20T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T06:00:00Z" to="2017-04-20T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="4.4" />
+        <maxTemperature id="TTT" unit="celsius" value="10.9" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T13:00:00Z" to="2017-04-20T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="11.0" />
+        <windDirection id="dd" deg="197.2" name="S" />
+        <windSpeed id="ff" mps="5.6" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.0" />
+        <humidity value="74.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1018.8" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="12.7" />
+        <mediumClouds id="MEDIUM" percent="99.1" />
+        <highClouds id="HIGH" percent="97.9" />
+        <dewpointTemperature id="TD" unit="celsius" value="6.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T12:00:00Z" to="2017-04-20T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T11:00:00Z" to="2017-04-20T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T10:00:00Z" to="2017-04-20T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T07:00:00Z" to="2017-04-20T13:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.7" />
+        <maxTemperature id="TTT" unit="celsius" value="11.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T14:00:00Z" to="2017-04-20T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="11.1" />
+        <windDirection id="dd" deg="201.5" name="S" />
+        <windSpeed id="ff" mps="5.7" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="7.8" />
+        <humidity value="76.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1017.8" />
+        <cloudiness id="NN" percent="99.8" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="5.3" />
+        <mediumClouds id="MEDIUM" percent="97.0" />
+        <highClouds id="HIGH" percent="95.2" />
+        <dewpointTemperature id="TD" unit="celsius" value="7.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T13:00:00Z" to="2017-04-20T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T12:00:00Z" to="2017-04-20T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T11:00:00Z" to="2017-04-20T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T08:00:00Z" to="2017-04-20T14:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="7.2" />
+        <maxTemperature id="TTT" unit="celsius" value="11.1" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T15:00:00Z" to="2017-04-20T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="11.1" />
+        <windDirection id="dd" deg="206.3" name="SW" />
+        <windSpeed id="ff" mps="7.5" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.2" />
+        <humidity value="73.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1016.7" />
+        <cloudiness id="NN" percent="99.9" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.6" />
+        <mediumClouds id="MEDIUM" percent="94.4" />
+        <highClouds id="HIGH" percent="98.1" />
+        <dewpointTemperature id="TD" unit="celsius" value="6.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T14:00:00Z" to="2017-04-20T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T13:00:00Z" to="2017-04-20T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T12:00:00Z" to="2017-04-20T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T09:00:00Z" to="2017-04-20T15:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="8.5" />
+        <maxTemperature id="TTT" unit="celsius" value="11.1" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T16:00:00Z" to="2017-04-20T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="10.4" />
+        <windDirection id="dd" deg="205.8" name="SW" />
+        <windSpeed id="ff" mps="7.3" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="10.4" />
+        <humidity value="73.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1015.9" />
+        <cloudiness id="NN" percent="100.0" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="63.8" />
+        <highClouds id="HIGH" percent="99.9" />
+        <dewpointTemperature id="TD" unit="celsius" value="5.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T15:00:00Z" to="2017-04-20T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T14:00:00Z" to="2017-04-20T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T13:00:00Z" to="2017-04-20T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T10:00:00Z" to="2017-04-20T16:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="9.4" />
+        <maxTemperature id="TTT" unit="celsius" value="11.1" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T17:00:00Z" to="2017-04-20T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="9.7" />
+        <windDirection id="dd" deg="201.6" name="S" />
+        <windSpeed id="ff" mps="6.0" beaufort="4" name="Laber bris" />
+        <windGust id="ff_gust" mps="9.9" />
+        <humidity value="77.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1015.4" />
+        <cloudiness id="NN" percent="99.7" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="1.3" />
+        <highClouds id="HIGH" percent="99.7" />
+        <dewpointTemperature id="TD" unit="celsius" value="5.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T16:00:00Z" to="2017-04-20T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T15:00:00Z" to="2017-04-20T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T14:00:00Z" to="2017-04-20T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T11:00:00Z" to="2017-04-20T17:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="9.7" />
+        <maxTemperature id="TTT" unit="celsius" value="11.1" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T18:00:00Z" to="2017-04-20T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="9.0" />
+        <windDirection id="dd" deg="206.2" name="SW" />
+        <windSpeed id="ff" mps="5.3" beaufort="3" name="Lett bris" />
+        <windGust id="ff_gust" mps="8.2" />
+        <humidity value="80.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1014.9" />
+        <cloudiness id="NN" percent="99.8" />
+        <fog id="FOG" percent="0.0" />
+        <lowClouds id="LOW" percent="0.6" />
+        <mediumClouds id="MEDIUM" percent="1.8" />
+        <highClouds id="HIGH" percent="99.8" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="5.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T17:00:00Z" to="2017-04-20T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T16:00:00Z" to="2017-04-20T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="PartlyCloud" number="3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T15:00:00Z" to="2017-04-20T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <symbol id="Cloud" number="4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T12:00:00Z" to="2017-04-20T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" minvalue="0.0" maxvalue="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="9.0" />
+        <maxTemperature id="TTT" unit="celsius" value="11.1" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T00:00:00Z" to="2017-04-21T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="4.4" />
+        <windDirection id="dd" deg="248.1" name="W" />
+        <windSpeed id="ff" mps="2.9" beaufort="2" name="Svak vind" />
+        <humidity value="74.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1010.3" />
+        <cloudiness id="NN" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-20T18:00:00Z" to="2017-04-21T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="4.4" />
+        <maxTemperature id="TTT" unit="celsius" value="10.0" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T06:00:00Z" to="2017-04-21T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.5" />
+        <windDirection id="dd" deg="253.9" name="W" />
+        <windSpeed id="ff" mps="3.2" beaufort="2" name="Svak vind" />
+        <humidity value="69.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1006.2" />
+        <cloudiness id="NN" percent="0.0" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T00:00:00Z" to="2017-04-21T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.3" />
+        <maxTemperature id="TTT" unit="celsius" value="5.5" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T12:00:00Z" to="2017-04-21T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="10.3" />
+        <windDirection id="dd" deg="281.8" name="W" />
+        <windSpeed id="ff" mps="6.3" beaufort="4" name="Laber bris" />
+        <humidity value="29.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1002.0" />
+        <cloudiness id="NN" percent="79.7" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="74.6" />
+        <highClouds id="HIGH" percent="0.8" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-7.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T06:00:00Z" to="2017-04-21T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.5" />
+        <maxTemperature id="TTT" unit="celsius" value="10.5" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T18:00:00Z" to="2017-04-21T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.6" />
+        <windDirection id="dd" deg="292.3" name="W" />
+        <windSpeed id="ff" mps="3.9" beaufort="3" name="Lett bris" />
+        <humidity value="41.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1001.5" />
+        <cloudiness id="NN" percent="49.2" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="24.2" />
+        <highClouds id="HIGH" percent="15.6" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-5.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T12:00:00Z" to="2017-04-21T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.6" />
+        <maxTemperature id="TTT" unit="celsius" value="10.4" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T00:00:00Z" to="2017-04-22T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.7" />
+        <windDirection id="dd" deg="288.1" name="W" />
+        <windSpeed id="ff" mps="2.8" beaufort="2" name="Svak vind" />
+        <humidity value="61.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1003.1" />
+        <cloudiness id="NN" percent="55.1" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.4" />
+        <highClouds id="HIGH" percent="15.2" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-5.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-21T18:00:00Z" to="2017-04-22T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.7" />
+        <maxTemperature id="TTT" unit="celsius" value="6.6" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T06:00:00Z" to="2017-04-22T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.7" />
+        <windDirection id="dd" deg="312.6" name="NW" />
+        <windSpeed id="ff" mps="3.2" beaufort="2" name="Svak vind" />
+        <humidity value="57.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1004.6" />
+        <cloudiness id="NN" percent="53.9" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="1.2" />
+        <highClouds id="HIGH" percent="32.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-4.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T00:00:00Z" to="2017-04-22T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.1" />
+        <maxTemperature id="TTT" unit="celsius" value="3.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T12:00:00Z" to="2017-04-22T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="9.9" />
+        <windDirection id="dd" deg="327.2" name="NW" />
+        <windSpeed id="ff" mps="5.7" beaufort="4" name="Laber bris" />
+        <humidity value="31.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1005.7" />
+        <cloudiness id="NN" percent="73.4" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="58.6" />
+        <highClouds id="HIGH" percent="12.5" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-6.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T06:00:00Z" to="2017-04-22T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.7" />
+        <maxTemperature id="TTT" unit="celsius" value="10.1" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T18:00:00Z" to="2017-04-22T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.8" />
+        <windDirection id="dd" deg="344.5" name="N" />
+        <windSpeed id="ff" mps="4.2" beaufort="3" name="Lett bris" />
+        <humidity value="38.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1008.0" />
+        <cloudiness id="NN" percent="4.3" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="4.3" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-6.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T12:00:00Z" to="2017-04-22T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.8" />
+        <maxTemperature id="TTT" unit="celsius" value="10.4" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T00:00:00Z" to="2017-04-23T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.4" />
+        <windDirection id="dd" deg="306.2" name="NW" />
+        <windSpeed id="ff" mps="2.4" beaufort="2" name="Svak vind" />
+        <humidity value="62.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1009.4" />
+        <cloudiness id="NN" percent="0.4" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="0" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-5.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-22T18:00:00Z" to="2017-04-23T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.4" />
+        <maxTemperature id="TTT" unit="celsius" value="6.8" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T06:00:00Z" to="2017-04-23T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.5" />
+        <windDirection id="dd" deg="301.0" name="NW" />
+        <windSpeed id="ff" mps="2.8" beaufort="2" name="Svak vind" />
+        <humidity value="56.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1010.1" />
+        <cloudiness id="NN" percent="5.5" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="5.1" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-5.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T00:00:00Z" to="2017-04-23T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.3" />
+        <maxTemperature id="TTT" unit="celsius" value="2.5" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T12:00:00Z" to="2017-04-23T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.7" />
+        <windDirection id="dd" deg="311.5" name="NW" />
+        <windSpeed id="ff" mps="3.4" beaufort="3" name="Lett bris" />
+        <humidity value="30.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1009.7" />
+        <cloudiness id="NN" percent="74.6" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="69.5" />
+        <highClouds id="HIGH" percent="2.3" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-8.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T06:00:00Z" to="2017-04-23T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.4" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T18:00:00Z" to="2017-04-23T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.6" />
+        <windDirection id="dd" deg="169.3" name="S" />
+        <windSpeed id="ff" mps="2.0" beaufort="2" name="Svak vind" />
+        <humidity value="52.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1008.6" />
+        <cloudiness id="NN" percent="63.3" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="47.3" />
+        <highClouds id="HIGH" percent="28.9" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.6" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T12:00:00Z" to="2017-04-23T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.6" />
+        <maxTemperature id="TTT" unit="celsius" value="9.0" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T00:00:00Z" to="2017-04-24T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.5" />
+        <windDirection id="dd" deg="309.3" name="NW" />
+        <windSpeed id="ff" mps="1.8" beaufort="2" name="Svak vind" />
+        <humidity value="78.6" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1009.8" />
+        <cloudiness id="NN" percent="92.2" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="7.8" />
+        <highClouds id="HIGH" percent="62.5" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.0" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-23T18:00:00Z" to="2017-04-24T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.1" />
+        <maxTemperature id="TTT" unit="celsius" value="5.6" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T06:00:00Z" to="2017-04-24T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.7" />
+        <windDirection id="dd" deg="124.6" name="SE" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <humidity value="71.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1006.4" />
+        <cloudiness id="NN" percent="97.7" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="50.8" />
+        <highClouds id="HIGH" percent="73.4" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T00:00:00Z" to="2017-04-24T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.4" />
+        <maxTemperature id="TTT" unit="celsius" value="2.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T12:00:00Z" to="2017-04-24T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.3" />
+        <windDirection id="dd" deg="190.4" name="S" />
+        <windSpeed id="ff" mps="3.7" beaufort="3" name="Lett bris" />
+        <humidity value="44.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="998.6" />
+        <cloudiness id="NN" percent="97.3" />
+        <lowClouds id="LOW" percent="14.1" />
+        <mediumClouds id="MEDIUM" percent="91.0" />
+        <highClouds id="HIGH" percent="58.2" />
+        <temperatureProbability unit="probabilitycode" value="2" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T06:00:00Z" to="2017-04-24T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.7" />
+        <maxTemperature id="TTT" unit="celsius" value="8.3" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T18:00:00Z" to="2017-04-24T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="5.2" />
+        <windDirection id="dd" deg="353.3" name="N" />
+        <windSpeed id="ff" mps="3.3" beaufort="2" name="Svak vind" />
+        <humidity value="71.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="996.7" />
+        <cloudiness id="NN" percent="96.5" />
+        <lowClouds id="LOW" percent="9.0" />
+        <mediumClouds id="MEDIUM" percent="90.6" />
+        <highClouds id="HIGH" percent="89.5" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="0.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T12:00:00Z" to="2017-04-24T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="5.1" />
+        <maxTemperature id="TTT" unit="celsius" value="9.1" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T00:00:00Z" to="2017-04-25T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="2.7" />
+        <windDirection id="dd" deg="9.9" name="N" />
+        <windSpeed id="ff" mps="3.0" beaufort="2" name="Svak vind" />
+        <humidity value="80.1" unit="percent" />
+        <pressure id="pr" unit="hPa" value="995.5" />
+        <cloudiness id="NN" percent="94.9" />
+        <lowClouds id="LOW" percent="14.5" />
+        <mediumClouds id="MEDIUM" percent="66.8" />
+        <highClouds id="HIGH" percent="16.8" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-24T18:00:00Z" to="2017-04-25T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="2.7" />
+        <maxTemperature id="TTT" unit="celsius" value="5.2" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T06:00:00Z" to="2017-04-25T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.1" />
+        <windDirection id="dd" deg="303.1" name="NW" />
+        <windSpeed id="ff" mps="3.0" beaufort="2" name="Svak vind" />
+        <humidity value="63.9" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1000.3" />
+        <cloudiness id="NN" percent="66.4" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="12.5" />
+        <highClouds id="HIGH" percent="5.5" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T00:00:00Z" to="2017-04-25T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.3" />
+        <maxTemperature id="TTT" unit="celsius" value="3.1" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T12:00:00Z" to="2017-04-25T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="8.7" />
+        <windDirection id="dd" deg="13.7" name="N" />
+        <windSpeed id="ff" mps="4.0" beaufort="3" name="Lett bris" />
+        <humidity value="43.0" unit="percent" />
+        <pressure id="pr" unit="hPa" value="999.0" />
+        <cloudiness id="NN" percent="87.5" />
+        <lowClouds id="LOW" percent="3.1" />
+        <mediumClouds id="MEDIUM" percent="65.6" />
+        <highClouds id="HIGH" percent="14.8" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-3.5" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T06:00:00Z" to="2017-04-25T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.0" />
+        <maxTemperature id="TTT" unit="celsius" value="8.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T18:00:00Z" to="2017-04-25T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.1" />
+        <windDirection id="dd" deg="189.4" name="S" />
+        <windSpeed id="ff" mps="2.3" beaufort="2" name="Svak vind" />
+        <humidity value="60.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1000.2" />
+        <cloudiness id="NN" percent="93.8" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="85.2" />
+        <highClouds id="HIGH" percent="28.9" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.2" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T12:00:00Z" to="2017-04-25T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.1" />
+        <maxTemperature id="TTT" unit="celsius" value="9.3" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T00:00:00Z" to="2017-04-26T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.8" />
+        <windDirection id="dd" deg="240.4" name="SW" />
+        <windSpeed id="ff" mps="1.9" beaufort="2" name="Svak vind" />
+        <humidity value="80.4" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1002.2" />
+        <cloudiness id="NN" percent="95.3" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="69.9" />
+        <highClouds id="HIGH" percent="33.2" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.4" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-25T18:00:00Z" to="2017-04-26T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.7" />
+        <maxTemperature id="TTT" unit="celsius" value="6.1" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T06:00:00Z" to="2017-04-26T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.1" />
+        <windDirection id="dd" deg="4.7" name="N" />
+        <windSpeed id="ff" mps="2.1" beaufort="2" name="Svak vind" />
+        <humidity value="70.8" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1004.0" />
+        <cloudiness id="NN" percent="69.1" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="32.4" />
+        <highClouds id="HIGH" percent="5.9" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.9" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T00:00:00Z" to="2017-04-26T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.8" />
+        <maxTemperature id="TTT" unit="celsius" value="3.1" />
+        <symbol id="Cloud" number="4" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T12:00:00Z" to="2017-04-26T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="9.3" />
+        <windDirection id="dd" deg="35.4" name="NE" />
+        <windSpeed id="ff" mps="3.4" beaufort="3" name="Lett bris" />
+        <humidity value="39.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1005.0" />
+        <cloudiness id="NN" percent="80.9" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="75.8" />
+        <highClouds id="HIGH" percent="12.5" />
+        <temperatureProbability unit="probabilitycode" value="2" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-4.1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T06:00:00Z" to="2017-04-26T12:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="3.1" />
+        <maxTemperature id="TTT" unit="celsius" value="9.3" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T18:00:00Z" to="2017-04-26T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="6.2" />
+        <windDirection id="dd" deg="34.3" name="NE" />
+        <windSpeed id="ff" mps="2.5" beaufort="2" name="Svak vind" />
+        <humidity value="61.5" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1006.1" />
+        <cloudiness id="NN" percent="81.2" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="76.6" />
+        <highClouds id="HIGH" percent="52.3" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-0.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T12:00:00Z" to="2017-04-26T18:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="6.2" />
+        <maxTemperature id="TTT" unit="celsius" value="9.5" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-27T00:00:00Z" to="2017-04-27T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="1.3" />
+        <windDirection id="dd" deg="0.6" name="N" />
+        <windSpeed id="ff" mps="2.1" beaufort="2" name="Svak vind" />
+        <humidity value="75.3" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1014.6" />
+        <cloudiness id="NN" percent="0.8" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="0.0" />
+        <highClouds id="HIGH" percent="0.0" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="0" />
+        <dewpointTemperature id="TD" unit="celsius" value="-2.8" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-26T18:00:00Z" to="2017-04-27T00:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="1.3" />
+        <maxTemperature id="TTT" unit="celsius" value="6.7" />
+        <symbol id="PartlyCloud" number="3" />
+        <symbolProbability unit="probabilitycode" value="1" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-27T06:00:00Z" to="2017-04-27T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <temperature id="TTT" unit="celsius" value="3.3" />
+        <windDirection id="dd" deg="347.6" name="N" />
+        <windSpeed id="ff" mps="2.0" beaufort="2" name="Svak vind" />
+        <humidity value="73.2" unit="percent" />
+        <pressure id="pr" unit="hPa" value="1013.2" />
+        <cloudiness id="NN" percent="70.3" />
+        <lowClouds id="LOW" percent="0.0" />
+        <mediumClouds id="MEDIUM" percent="1.2" />
+        <highClouds id="HIGH" percent="10.5" />
+        <temperatureProbability unit="probabilitycode" value="1" />
+        <windProbability unit="probabilitycode" value="1" />
+        <dewpointTemperature id="TD" unit="celsius" value="-1.3" />
+      </location>
+    </time>
+    <time datatype="forecast" from="2017-04-27T00:00:00Z" to="2017-04-27T06:00:00Z">
+      <location altitude="0" latitude="59.8940" longitude="10.6450">
+        <precipitation unit="mm" value="0.0" />
+        <minTemperature id="TTT" unit="celsius" value="0.6" />
+        <maxTemperature id="TTT" unit="celsius" value="3.3" />
+        <symbol id="Sun" number="1" />
+        <symbolProbability unit="probabilitycode" value="2" />
+      </location>
+    </time>
+  </product>
+</weatherdata>
