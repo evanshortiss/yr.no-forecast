@@ -6,12 +6,11 @@ hood. See the API docs at [yr.no](http://api.yr.no/weatherapi/locationforecast/1
 
 
 ## Usage
-Use the ```getWeather(queryParams, [version])``` function to get a
-LocationForecast object, where `version` represents the version of the
-"locationforecast" service to use. 1.9 is the default.
+Use the ```getWeather(queryParams)``` function to get a
+LocationForecast object by calling the "locationforecast" API.
 
-This object has functions that take a callback as parameter and are detailed in
-the example below.
+Here's an example:
+
 
 ```js
 const yrno = require('yr.no-forecast')({
@@ -24,15 +23,19 @@ const LOCATION = {
   lon: 6.2597
 };
 
-yrno.getWeather(LOCATION).then((weather) => {
-  // Get general weather for next five days (Array with five objects)
-  weather.getFiveDaySummary()
-    .then((data) => console.log(data));
+yrno.getWeather(LOCATION)
+  .then((weather) => {
+    // Get general weather for next five days (Array with five objects)
+    weather.getFiveDaySummary()
+      .then((data) => console.log('five day summary', data));
 
-  // Get a weather data point for a given time between now and 9 days ahead
-  weather.getForecastForTime(time)
-    .then((data) => console.log(data));
-});
+    // Get a weather data point for a given time between now and 9 days ahead
+    weather.getForecastForTime(new Date())
+      .then((data) => console.log('current weather', data));
+  })
+  .catch((e) => {
+    console.log('an error occurred!', e);
+  });
 ```
 
 ## API
