@@ -1,6 +1,6 @@
 {
   "name": "yr.no-forecast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "retrieve a weather forecast for a given time and location from met.no",
   "main": "./index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "linelint": "linelint -l 120 index.js test/*.js",
     "unit": "NODE_PATH=. mocha test/",
     "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
-    "coverage": "NODE_PATH=. nyc mocha test/ && nyc report --reporter=lcov"
+    "coverage": "NODE_PATH=. nyc mocha test/ && nyc report --reporter=lcov",
+    "example": "node example/dublin-weather.js"
   },
   "files": [
     "index.js"
@@ -20,15 +21,15 @@
     "debug": "~2.6.3",
     "lodash.filter": "~4.6.0",
     "lodash.foreach": "~4.5.0",
-    "moment": "~2.4.0",
+    "moment": "~2.18.1",
     "pixl-xml": "~1.0.10",
     "verror": "~1.9.0",
-    "yr.no-interface": "~0.1.1"
+    "yr.no-interface": "~1.0.0"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evanshortiss/yr.no-forecast"
+    "url": "git+https://github.com/evanshortiss/yr.no-forecast.git"
   },
   "keywords": [
     "yr.no",
@@ -58,5 +59,13 @@
     "proxyquire": "~1.7.11",
     "require-uncached": "~1.0.3",
     "sinon": "~2.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/evanshortiss/yr.no-forecast/issues"
+  },
+  "homepage": "https://github.com/evanshortiss/yr.no-forecast#readme",
+  "directories": {
+    "example": "example",
+    "test": "test"
   }
 }
