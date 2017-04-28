@@ -1,22 +1,22 @@
 'use strict';
 
-var moment = require('moment');
-var proxyquire = require('proxyquire');
-var sinon = require('sinon');
-var chai = require('chai');
-var readFileSync = require('fs').readFileSync;
-var join = require('path').join;
-var uncached = require('require-uncached');
+const moment = require('moment');
+const proxyquire = require('proxyquire');
+const sinon = require('sinon');
+const chai = require('chai');
+const readFileSync = require('fs').readFileSync;
+const join = require('path').join;
+const uncached = require('require-uncached');
 
 chai.use(require('chai-truthy'));
 var expect = require('chai').expect;
 
-var SAMPLE_XML = readFileSync(
+const SAMPLE_XML = readFileSync(
   join(__dirname, '../fixtures/weather-response-oslo.xml'), 'utf8'
 );
 
 
-var LOCATION = {
+const LOCATION = {
   lat: 53.3478,
   lon: 6.2597
 };
@@ -24,15 +24,17 @@ var LOCATION = {
 describe('yr.no-forecast', function() {
   this.timeout(5000);
 
-  var lib, stubs;
+  var lib, stubs, yrno;
 
   var YRNO = 'yr.no-interface';
 
   beforeEach(function () {
+    yrno = {
+      locationforecast: sinon.stub().yields(null, SAMPLE_XML)
+    };
+
     stubs = {
-      [YRNO]: {
-        locationforecast: sinon.stub().yields(null, SAMPLE_XML)
-      }
+      [YRNO]: sinon.stub().returns(yrno)
     };
 
     lib = proxyquire('../index.js', stubs);
@@ -40,7 +42,7 @@ describe('yr.no-forecast', function() {
 
   describe('#getWeather', function () {
     it('should return an error for malformed xml payloads', function () {
-      stubs[YRNO].locationforecast.yields(null, '<xml><invalid </invalid></xml>');
+      stubs[YRNO]({}).locationforecast.yields(null, '<xml><invalid </invalid></xml>');
 
       return lib().getWeather(LOCATION)
         .then(() => {
@@ -51,16 +53,16 @@ describe('yr.no-forecast', function() {
           expect(err.toString()).to.contain('Parse Error: Mismatched closing tag');
 
           expect(
-            stubs[YRNO].locationforecast.getCall(0).args[1]
-          ).to.equal(1.9);
-          expect(
-            stubs[YRNO].locationforecast.getCall(0).args[0]
-          ).to.equal(LOCATION);
+            yrno.locationforecast.getCall(0).args[0]
+          ).to.deep.equal({
+            version: 1.9,
+            query: LOCATION
+          });
         });
     });
 
     it('should return an error on yr.no API errors', function () {
-      stubs[YRNO].locationforecast.yields(new Error('oh noes!'));
+      stubs[YRNO]({}).locationforecast.yields(new Error('oh noes!'));
 
       return lib().getWeather(LOCATION)
         .then(() => {
@@ -92,7 +94,7 @@ describe('yr.no-forecast', function() {
       return lib({version: version}).getWeather(LOCATION)
         .then(function() {
           expect(
-            stubs[YRNO].locationforecast.getCall(0).args[1]
+            yrno.locationforecast.getCall(0).args[0].version
           ).to.equal(version);
         });
     });
@@ -103,7 +105,7 @@ describe('yr.no-forecast', function() {
       return lib().getWeather(LOCATION, version)
         .then(function() {
           expect(
-            stubs[YRNO].locationforecast.getCall(0).args[1]
+            yrno.locationforecast.getCall(0).args[0].version
           ).to.equal(version);
         });
     });

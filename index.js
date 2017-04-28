@@ -1,7 +1,6 @@
 'use strict';
 
 const log = require('debug')(require('./package.json').name);
-const yrno = require('yr.no-interface');
 const moment = require('moment');
 const XML = require('pixl-xml');
 const VError = require('verror');
@@ -11,7 +10,14 @@ const Promise = require('bluebird');
 
 module.exports = (config) => {
   // Make a default config, but extend it with the passed config
-  config = Object.assign({version: 1.9}, config);
+  config = Object.assign({
+    version: 1.9
+  }, config);
+
+  // Create a yrno instance with any overrides required
+  const yrno = require('yr.no-interface')({
+    request: config.request
+  });
 
   return {
     /**
@@ -28,7 +34,10 @@ module.exports = (config) => {
 
       return Promise.fromCallback(function (callback) {
         // Make a standard call to the API
-        yrno.locationforecast(params, version, function(err, body) {
+        yrno.locationforecast({
+          query: params,
+          version: version
+        }, function(err, body) {
           if (err) {
             log('failed to get locationforecast from yr.no API. Error:', err);
             return callback(err, null);

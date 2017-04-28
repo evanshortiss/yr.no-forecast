@@ -16,7 +16,11 @@ Here's an example:
 
 ```js
 const yrno = require('yr.no-forecast')({
-  version: '1.9' // this is the default if not provided
+  version: '1.9', // this is the default if not provided,
+  request: {
+    // make calls to locationforecast timeout after 15 seconds
+    timeout: 15000
+  }
 });
 
 const LOCATION = {
@@ -44,16 +48,21 @@ yrno.getWeather(LOCATION)
 
 ### module(config)
 This module exports a single factory function that can be used to get a
-configured instance that exports the `getWeather` function.
+configured `instance` that exports the `getWeather` function.
 
 Currently supported config options:
 
-* version - This will be passed when making a call to the met.no API
+* version - Passed when making a call to the met.no API to select the
+locationforecast version to call
+* request - Can be populated with options for the `request` module. The only
+setting that you should need to pass is `timeout` and is demonstrated above
 
 
-### module.getWeather(params)
+### instance.getWeather(params[, version])
 Returns a Promise that will resolve with a `LocationForecast` object that
-contains functions to get weather data.
+contains functions to get weather data. You can pass the version parameter if
+you want to override the default of 1.9, or the default you supplied when
+creating and instance.
 
 ### LocationForecast.getFiveDaySummary()
 Returns a Promise that resolves to an Array of 5 weather data Objects.
