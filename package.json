@@ -1,6 +1,6 @@
 {
   "name": "yr.no-forecast",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "retrieve a weather forecast for a given time and location from met.no",
   "main": "./index.js",
   "scripts": {
@@ -17,9 +17,11 @@
     "index.js"
   ],
   "dependencies": {
+    "benchmark": "~2.1.4",
     "bluebird": "~3.5.0",
     "debug": "~2.6.3",
     "lodash.filter": "~4.6.0",
+    "lodash.find": "~4.6.0",
     "lodash.foreach": "~4.5.0",
     "moment": "~2.18.1",
     "pixl-xml": "~1.0.10",

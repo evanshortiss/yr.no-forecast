@@ -6,7 +6,6 @@ const sinon = require('sinon');
 const chai = require('chai');
 const readFileSync = require('fs').readFileSync;
 const join = require('path').join;
-const uncached = require('require-uncached');
 
 chai.use(require('chai-truthy'));
 var expect = require('chai').expect;
@@ -157,21 +156,17 @@ describe('yr.no-forecast', function() {
             expect(cur.to).to.be.a('string');
             expect(cur.from).to.be.a('string');
             expect(cur.rain).to.be.a('string');
-            expect(cur.temperature).to.be.a('string');
+            expect(cur.temperature).to.be.an('object');
             expect(cur.windDirection).to.be.an('object');
             expect(cur.windSpeed).to.be.an('object');
-            expect(cur.humidity).to.be.a('string');
-            expect(cur.pressure).to.be.a('string');
-            expect(cur.cloudiness).to.be.a('string');
-            expect(cur.lowClouds).to.be.a('string');
-            expect(cur.mediumClouds).to.be.a('string');
-            expect(cur.highClouds).to.be.a('string');
-            expect(cur.temperatureProbability).to.be.a('string');
-            expect(cur.windProbability).to.be.a('string');
-            expect(cur.dewpointTemperature).to.be.a('string');
+            expect(cur.humidity).to.be.an('object');
+            expect(cur.pressure).to.be.an('object');
+            expect(cur.cloudiness).to.be.an('object');
+            expect(cur.lowClouds).to.be.an('object');
+            expect(cur.mediumClouds).to.be.an('object');
+            expect(cur.highClouds).to.be.an('object');
+            expect(cur.dewpointTemperature).to.be.an('object');
           });
-
-          expect(summary).to.deep.equal(uncached('fixtures/five-day-oslo'));
         });
     });
   });
@@ -192,7 +187,7 @@ describe('yr.no-forecast', function() {
         });
     });
 
-    it('should return the easliest possible weather for a given date', function () {
+    it('should return null', function () {
       return lib().getWeather(LOCATION)
         .then(function(weather) {
           expect(weather).to.be.an('object');
@@ -200,71 +195,41 @@ describe('yr.no-forecast', function() {
           return weather.getForecastForTime(moment('2017-04-15'));
         })
         .then(function (forecast) {
-          expect(forecast).to.be.an('object');
-          expect(forecast.from).to.equal('2017-04-18T02:00:00Z');
+          expect(forecast).to.equal(null);
+        });
+    });
 
+    it('should get weather for 10:00 PM (22:00) by rounding up', function() {
+      var time = moment('2017-04-18');
+      time.set('hours', 21);
+      time.set('minutes', 35);
+
+      return lib().getWeather(LOCATION)
+        .then(function(weather) {
+          return weather.getForecastForTime(time);
+        })
+        .then(function (forecast) {
+          expect(forecast).to.be.an('object');
           expect(forecast.icon).to.be.a('string');
           expect(forecast.to).to.be.a('string');
           expect(forecast.from).to.be.a('string');
           expect(forecast.rain).to.be.a('string');
-          expect(forecast.temperature).to.be.a('string');
+          expect(forecast.temperature).to.be.an('object');
           expect(forecast.windDirection).to.be.an('object');
           expect(forecast.windSpeed).to.be.an('object');
           expect(forecast.windGust).to.be.an('object');
-          expect(forecast.humidity).to.be.a('string');
-          expect(forecast.pressure).to.be.a('string');
-          expect(forecast.cloudiness).to.be.a('string');
-          expect(forecast.fog).to.be.a('string');
-          expect(forecast.lowClouds).to.be.a('string');
-          expect(forecast.mediumClouds).to.be.a('string');
-          expect(forecast.highClouds).to.be.a('string');
-          expect(forecast.dewpointTemperature).to.be.a('string');
+          expect(forecast.humidity).to.be.an('object');
+          expect(forecast.pressure).to.be.an('object');
+          expect(forecast.cloudiness).to.be.an('object');
+          expect(forecast.fog).to.be.an('object');
+          expect(forecast.lowClouds).to.be.an('object');
+          expect(forecast.mediumClouds).to.be.an('object');
+          expect(forecast.highClouds).to.be.an('object');
+          expect(forecast.dewpointTemperature).to.be.an('object');
         });
     });
 
-    it('should get weather for earliest time possible today by requesting some time yesterday', function() {
-      var time = moment('2017-04-18').utc().startOf('day');
-      time.set('hours', time.hours() - time.hours() - 2);
-
-      return lib().getWeather(LOCATION)
-        .then(function(weather) {
-          return weather.getForecastForTime(time);
-        })
-        .then(function (forecast) {
-          expect(forecast).to.be.an('object');
-          expect(forecast.icon).to.be.a('string');
-          expect(forecast.to).to.be.a('string');
-          expect(forecast.from).to.be.a('string');
-          expect(forecast.rain).to.be.a('string');
-        });
-    });
-
-    it('should get weather for latest time possible today by requesting some time yesterday', function() {
-      var time = moment('2017-04-28');
-      time.set('hours', time.hours() - time.hours() - 4);
-
-      return lib().getWeather(LOCATION)
-        .then(function(weather) {
-          return weather.getForecastForTime(time);
-        })
-        .then(function (forecast) {
-          expect(forecast.icon).to.be.a('string');
-          expect(forecast.to).to.be.a('string');
-          expect(forecast.from).to.be.a('string');
-          expect(forecast.rain).to.be.a('string');
-          expect(forecast.temperature).to.be.a('string');
-          expect(forecast.windDirection).to.be.an('object');
-          expect(forecast.windSpeed).to.be.an('object');
-          expect(forecast.humidity).to.be.a('string');
-          expect(forecast.pressure).to.be.a('string');
-          expect(forecast.lowClouds).to.be.a('string');
-          expect(forecast.mediumClouds).to.be.a('string');
-          expect(forecast.highClouds).to.be.a('string');
-          expect(forecast.dewpointTemperature).to.be.a('string');
-        });
-    });
-
-    it('should get weather for 9:20 PM (21:20) tonight', function() {
+    it('should get weather for 9:00 PM (21:00) by rounding down', function() {
       var time = moment('2017-04-18');
       time.set('hours', 21);
       time.set('minutes', 20);
@@ -279,18 +244,18 @@ describe('yr.no-forecast', function() {
           expect(forecast.to).to.be.a('string');
           expect(forecast.from).to.be.a('string');
           expect(forecast.rain).to.be.a('string');
-          expect(forecast.temperature).to.be.a('string');
+          expect(forecast.temperature).to.be.an('object');
           expect(forecast.windDirection).to.be.an('object');
           expect(forecast.windSpeed).to.be.an('object');
           expect(forecast.windGust).to.be.an('object');
-          expect(forecast.humidity).to.be.a('string');
-          expect(forecast.pressure).to.be.a('string');
-          expect(forecast.cloudiness).to.be.a('string');
-          expect(forecast.fog).to.be.a('string');
-          expect(forecast.lowClouds).to.be.a('string');
-          expect(forecast.mediumClouds).to.be.a('string');
-          expect(forecast.highClouds).to.be.a('string');
-          expect(forecast.dewpointTemperature).to.be.a('string');
+          expect(forecast.humidity).to.be.an('object');
+          expect(forecast.pressure).to.be.an('object');
+          expect(forecast.cloudiness).to.be.an('object');
+          expect(forecast.fog).to.be.an('object');
+          expect(forecast.lowClouds).to.be.an('object');
+          expect(forecast.mediumClouds).to.be.an('object');
+          expect(forecast.highClouds).to.be.an('object');
+          expect(forecast.dewpointTemperature).to.be.an('object');
         });
     });
   });
