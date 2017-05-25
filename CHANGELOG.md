@@ -11,11 +11,11 @@ users of this module more flexibility and information.
 * Add `getValidTimes` function.
 * Fix security `request` and `qs` module vulnerabilities by updating to `yr.no-interface@1.0.1`.
 
-## 1.0.1 - 27/04/2017
+## 1.0.1 - 28/04/2017
 * Mitigate security vulnerabilities.
 * Use new yr.no-interface@1.0.0 internally.
 
-## 1.0.0 - 26/04/2017
+## 1.0.0 - 27/04/2017
 * Change to Promise based interface.
 * Make the module a factory function.
 * Use `pixl-xml` to increase XML parsing speed and lower memory usage. Yay for
