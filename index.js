@@ -166,11 +166,20 @@ LocationForecast.prototype = {
 
 
   /**
-   * Returns earliest ISO timestring available in the weather data
+   * Returns the earliest ISO timestring available in the weather data
    * @return {String}
    */
   getFirstDateInPayload: function () {
     return this.json.weatherdata.product.time[0].from;
+  },
+
+
+  /**
+   * Returns the latest ISO timestring available in the weather data
+   * @return {String}
+   */
+  getLastDateInPayload: function () {
+    return this.json.weatherdata.product.time[this.json.weatherdata.product.time.length - 1].from;
   },
 
 
@@ -218,11 +227,25 @@ LocationForecast.prototype = {
 
 
   /**
+   * Verifies if the pased timestamp is a within range for the weather data
+   * @param  {String|Number|Date}  time
+   * @return {Boolean}
+   */
+  isInRange: function (time) {
+    return moment.utc(time)
+      .isBetween(
+        moment(this.getFirstDateInPayload()),
+        moment(this.getLastDateInPayload())
+      );
+  },
+
+
+  /**
    * Returns a forecast for a given time.
    * @param {String|Date} time
    * @param {Function}    callback
    */
-  getForecastForTime: function(time) {
+  getForecastForTime: function (time) {
     time = moment.utc(time);
 
     if (time.isValid() === false) {
@@ -239,10 +262,10 @@ LocationForecast.prototype = {
 
     log('getForecastForTime', dateToForecastISO(time));
 
-    let data = this.times[dateToForecastISO(time)];
+    let data = this.times[dateToForecastISO(time)] || null;
 
     /* istanbul ignore else  */
-    if (!data) {
+    if (!data && this.isInRange(time)) {
       data = this.fallbackSelector(time);
     }
 
@@ -257,6 +280,8 @@ LocationForecast.prototype = {
 
 
   fallbackSelector: function (date) {
+    log('using fallbackSelector for date', date);
+
     const datetimes = Object.keys(this.times);
 
     let closest = null;

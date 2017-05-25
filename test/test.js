@@ -177,7 +177,7 @@ describe('yr.no-forecast', function() {
         .then((weather) => weather.getValidTimestamps())
         .then(function (times) {
           expect(times).to.be.an('array');
-          expect(times[0]).to.equal('2017-04-18T03:00:00Z');
+          expect(times[0]).to.equal('2017-04-18T13:00:00Z');
         });
     });
   });
@@ -197,7 +197,7 @@ describe('yr.no-forecast', function() {
         });
     });
 
-    it('should return null', function () {
+    it('should return null if date is not in range', function () {
       return lib().getWeather(LOCATION)
         .then(function(weather) {
           expect(weather).to.be.an('object');
@@ -266,6 +266,21 @@ describe('yr.no-forecast', function() {
           expect(forecast.mediumClouds).to.be.an('object');
           expect(forecast.highClouds).to.be.an('object');
           expect(forecast.dewpointTemperature).to.be.an('object');
+        });
+    });
+
+    it('should get weather closest to 1:00 PM for 2017-04-25 using fallbackSelector', function () {
+      var time = moment.utc('2017-04-25');
+      time.set('hours', 13);
+      time.set('minutes', 0);
+
+      return lib().getWeather(LOCATION)
+        .then(function(weather) {
+          return weather.getForecastForTime(time);
+        })
+        .then(function (forecast) {
+          expect(forecast).to.be.an('object');
+          expect(forecast.from).to.equal('2017-04-25T12:00:00Z');
         });
     });
   });
