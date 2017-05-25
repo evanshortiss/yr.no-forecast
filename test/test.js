@@ -171,6 +171,16 @@ describe('yr.no-forecast', function() {
     });
   });
 
+  describe('#getValidTimestamps', function () {
+    it('should return an array of ISO timestamps', function () {
+      return lib().getWeather(LOCATION)
+        .then((weather) => weather.getValidTimestamps())
+        .then(function (times) {
+          expect(times).to.be.an('array');
+          expect(times[0]).to.equal('2017-04-18T03:00:00Z');
+        });
+    });
+  });
 
   describe('#getForecastForTime', function () {
     it('should return an error for invalid date arguments', function () {

@@ -83,6 +83,10 @@ Returns the JSON representation of a locationforecast response.
 Returns the first date string that is available in the data returned from the
 locationforecast call.
 
+### LocationForecast.getValidTimes()
+Returns an Array of ISO timestamps that represent points in time that we have
+weather data for.
+
 
 ## Weather JSON Format
 Format is somewhat inspired by that of the
@@ -111,3 +115,7 @@ or similar techniques.
     dewpointTemperature: '-8.3 celcius'
 }
 ```
+
+## CHANGELOG
+
+Can be found [at this link](https://github.com/evanshortiss/yr.no-forecast/blob/master/CHANGELOG.md ).

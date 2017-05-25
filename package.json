@@ -11,13 +11,13 @@
     "unit": "NODE_PATH=. mocha test/",
     "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
     "coverage": "NODE_PATH=. nyc mocha test/ && nyc report --reporter=lcov",
-    "example": "node example/dublin-weather.js"
+    "example": "node example/dublin-weather.js",
+    "benchmark": "node benchmark/index.js"
   },
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "benchmark": "~2.1.4",
     "bluebird": "~3.5.0",
     "debug": "~2.6.3",
     "lodash.filter": "~4.6.0",
@@ -26,7 +26,7 @@
     "moment": "~2.18.1",
     "pixl-xml": "~1.0.10",
     "verror": "~1.9.0",
-    "yr.no-interface": "~1.0.0"
+    "yr.no-interface": "~1.0.1"
   },
   "license": "MIT",
   "repository": {
@@ -51,6 +51,7 @@
   },
   "author": "Evan Shortiss",
   "devDependencies": {
+    "benchmark": "~2.1.4",
     "chai": "~3.5.0",
     "chai-truthy": "~1.0.0",
     "coveralls": "~2.13.0",

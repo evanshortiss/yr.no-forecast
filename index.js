@@ -1,15 +1,5 @@
 'use strict';
 
-/**
- * new parsing logic, take note of xml structure:
- * * each day has a large node for each hour with general info for that hour
- * * each of those hourly detail nodes is followed by up to four more "simple" node_js
- *
- *
- * for current time search go to start or end of hour, whichever is nearer since
- * xml only has data for 00 minutes each AKA top of the hour
- */
-
 const log = require('debug')(require('./package.json').name);
 const moment = require('moment');
 const XML = require('pixl-xml');
@@ -17,14 +7,30 @@ const VError = require('verror');
 const each = require('lodash.foreach');
 const Promise = require('bluebird');
 
+/**
+ * "simple" nodes are those with very basic detail. 1 to 4 of these follow a
+ * node with more details
+ * @param  {Object}  node
+ * @return {Boolean}
+ */
 function isSimpleNode (node) {
   return node.location.symbol !== undefined;
 }
 
+/**
+ * Check if a node has a min and max temp range
+ * @param  {Object}  node
+ * @return {Boolean}
+ */
 function hasTemperatureRange (node) {
   return node.location.minTemperature && node.location.maxTemperature;
 }
 
+/**
+ * Convert a momentjs date object into an ISO string compatible with our XML
+ * @param  {Date}   date
+ * @return {String}
+ */
 function dateToForecastISO (date) {
   return date.utc().format('YYYY-MM-DDTHH:mm:ss[Z]');
 }
@@ -142,7 +148,8 @@ LocationForecast.prototype = {
 
 
   /**
-   * Return JSON of weather
+   * Returns the JSON representation of the parsed XML`
+   * @return {Object}
    */
   getJson: function() {
     return this.json;
@@ -150,15 +157,29 @@ LocationForecast.prototype = {
 
 
   /**
-   * Return XML of weather
+   * Return the XML string that the met.no api returned
+   * @return {String}
    */
   getXml: function() {
     return this.xml;
   },
 
 
+  /**
+   * Returns earliest ISO timestring available in the weather data
+   * @return {String}
+   */
   getFirstDateInPayload: function () {
     return this.json.weatherdata.product.time[0].from;
+  },
+
+
+  /**
+   * Returns an array of all times that we have weather data for
+   * @return {Array<String>}
+   */
+  getValidTimestamps: function () {
+    return Object.keys(this.times);
   },
 
 
