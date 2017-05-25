@@ -4,9 +4,36 @@ const log = require('debug')(require('./package.json').name);
 const moment = require('moment');
 const XML = require('pixl-xml');
 const VError = require('verror');
-const filter = require('lodash.filter');
 const each = require('lodash.foreach');
 const Promise = require('bluebird');
+
+/**
+ * "simple" nodes are those with very basic detail. 1 to 4 of these follow a
+ * node with more details
+ * @param  {Object}  node
+ * @return {Boolean}
+ */
+function isSimpleNode (node) {
+  return node.location.symbol !== undefined;
+}
+
+/**
+ * Check if a node has a min and max temp range
+ * @param  {Object}  node
+ * @return {Boolean}
+ */
+function hasTemperatureRange (node) {
+  return node.location.minTemperature && node.location.maxTemperature;
+}
+
+/**
+ * Convert a momentjs date object into an ISO string compatible with our XML
+ * @param  {Date}   date
+ * @return {String}
+ */
+function dateToForecastISO (date) {
+  return date.utc().format('YYYY-MM-DDTHH:mm:ss[Z]');
+}
 
 module.exports = (config) => {
   // Make a default config, but extend it with the passed config
@@ -61,8 +88,11 @@ module.exports = (config) => {
  */
 function LocationForecast(xml) {
   this.xml = xml;
-  this.basic = [];
-  this.detail = [];
+
+  // Map containing weather info for given utc times
+  this.times = {
+    // e.g '2017-04-29T01:00:00Z': { DATA HERE }
+  };
 
   log('building LocationForecast object by parsing xml to JSON');
 
@@ -87,18 +117,39 @@ LocationForecast.prototype = {
   _init: function () {
     var self = this;
 
-    each(this.json.weatherdata.product.time, function (time) {
-      if (time.location.symbol) {
-        self.basic.push(time);
+    each(this.json.weatherdata.product.time, function (node) {
+      const simple = isSimpleNode(node);
+      const temps = hasTemperatureRange(node);
+
+      if (!simple) {
+        self.times[node.to] = node;
       } else {
-        self.detail.push(time);
+        // node is a small/simple node with format
+        // <time datatype="forecast" from="2017-04-28T22:00:00Z" to="2017-04-28T23:00:00Z">
+        //   <location altitude="17" latitude="34.0522" longitude="118.2437">
+        //     <precipitation unit="mm" value="0.0"/>
+        //     <symbol id="Sun" number="1"/>
+        //   </location>
+        // </time>
+
+        const parent = self.times[node.to];
+
+        parent.icon = node.location.symbol.id;
+        parent.rain = node.location.precipitation.value + ' ' + node.location.precipitation.unit;
+
+        /* istanbul ignore else  */
+        if (temps) {
+          parent.minTemperature = node.location.minTemperature;
+          parent.maxTemperature = node.location.maxTemperature;
+        }
       }
     });
   },
 
 
   /**
-   * Return JSON of weather
+   * Returns the JSON representation of the parsed XML`
+   * @return {Object}
    */
   getJson: function() {
     return this.json;
@@ -106,15 +157,38 @@ LocationForecast.prototype = {
 
 
   /**
-   * Return XML of weather
+   * Return the XML string that the met.no api returned
+   * @return {String}
    */
   getXml: function() {
     return this.xml;
   },
 
 
+  /**
+   * Returns the earliest ISO timestring available in the weather data
+   * @return {String}
+   */
   getFirstDateInPayload: function () {
     return this.json.weatherdata.product.time[0].from;
+  },
+
+
+  /**
+   * Returns the latest ISO timestring available in the weather data
+   * @return {String}
+   */
+  getLastDateInPayload: function () {
+    return this.json.weatherdata.product.time[this.json.weatherdata.product.time.length - 1].from;
+  },
+
+
+  /**
+   * Returns an array of all times that we have weather data for
+   * @return {Array<String>}
+   */
+  getValidTimestamps: function () {
+    return Object.keys(this.times);
   },
 
 
@@ -123,16 +197,27 @@ LocationForecast.prototype = {
    * @param {Function} callback
    */
   getFiveDaySummary: function() {
-    log('getting five day summary');
+    const startDate = moment.utc(this.getFirstDateInPayload());
+    const baseDate = startDate.clone().set('hour', 12).startOf('hour');
+    let firstDate = baseDate.clone();
 
-    var firstDate = moment.utc(this.getFirstDateInPayload()).hours(12);
+    log(`five day summary is using ${baseDate.toString()} as a starting point`);
+
+    /* istanbul ignore else  */
+    if (firstDate.isBefore(startDate)) {
+      // first date is unique since we may not have data back to midday so instead we
+      // go with the earliest available
+      firstDate = startDate.clone();
+    }
+
+    log(`getting five day summary starting with ${firstDate.toISOString()}`);
 
     return Promise.all([
       this.getForecastForTime(firstDate),
-      this.getForecastForTime(firstDate.clone().add('days', 1)),
-      this.getForecastForTime(firstDate.clone().add('days', 2)),
-      this.getForecastForTime(firstDate.clone().add('days', 3)),
-      this.getForecastForTime(firstDate.clone().add('days', 4))
+      this.getForecastForTime(baseDate.clone().add(1, 'days')),
+      this.getForecastForTime(baseDate.clone().add(2, 'days')),
+      this.getForecastForTime(baseDate.clone().add(3, 'days')),
+      this.getForecastForTime(baseDate.clone().add(4, 'days'))
     ])
       .then(function (results) {
         // Return a single array of objects
@@ -142,13 +227,25 @@ LocationForecast.prototype = {
 
 
   /**
+   * Verifies if the pased timestamp is a within range for the weather data
+   * @param  {String|Number|Date}  time
+   * @return {Boolean}
+   */
+  isInRange: function (time) {
+    return moment.utc(time)
+      .isBetween(
+        moment(this.getFirstDateInPayload()),
+        moment(this.getLastDateInPayload())
+      );
+  },
+
+
+  /**
    * Returns a forecast for a given time.
    * @param {String|Date} time
    * @param {Function}    callback
    */
-  getForecastForTime: function(time) {
-    var self = this;
-
+  getForecastForTime: function (time) {
     time = moment.utc(time);
 
     if (time.isValid() === false) {
@@ -157,181 +254,61 @@ LocationForecast.prototype = {
       );
     }
 
-    log('getting forecast for time %s', time);
+    if (time.minute() > 30) {
+      time.add('hours', 1).startOf('hour');
+    } else {
+      time.startOf('hour');
+    }
 
-    return Promise.resolve()
-      .then(function () {
-        return buildDetail(
-          self.getDetailForTime(time),
-          self.getBasicForTime(time)
-        );
-      });
+    log('getForecastForTime', dateToForecastISO(time));
+
+    let data = this.times[dateToForecastISO(time)] || null;
+
+    /* istanbul ignore else  */
+    if (!data && this.isInRange(time)) {
+      data = this.fallbackSelector(time);
+    }
+
+    /* istanbul ignore else  */
+    if (data) {
+      data = Object.assign({}, data, data.location);
+      delete data.location;
+    }
+
+    return Promise.resolve(data);
   },
 
-  /**
-   * Get basic items for a time.
-   * Find nearest hour on same day, or no result.
-   * @param {String|Object}
-   * @param {Function}
-   */
-  getBasicForTime: function (date) {
-    date = moment.utc(date);
 
-    log('getBasicForTime %s', date);
+  fallbackSelector: function (date) {
+    log('using fallbackSelector for date', date);
 
-    // Used to find closest time to one provided
-    var maxDifference = Infinity;
-    var res = null;
-    var items = getItemsForDay(this.basic, date);
-    var len = items.length;
-    var i = 0;
+    const datetimes = Object.keys(this.times);
 
-    while (i < len) {
-      var to = moment.utc(items[i].to);
-      var from = moment.utc(items[i].from);
+    let closest = null;
+    let curnode, curTo;
+    let len = datetimes.length - 1;
 
-      // Check the date falls in range
-      if ((from.isSame(date) || from.isBefore(date)) && (to.isSame(date) || to.isAfter(date))) {
-        var diff = Math.abs(to.diff(from));
-        if (diff < maxDifference) {
-          maxDifference = diff;
-          res = items[i];
+    while (len) {
+      curnode = this.times[datetimes[len]];
+      curTo = moment(curnode.to);
+
+      if (date.isSame(curTo, 'day')) {
+        if (!closest) {
+          closest = curnode;
+        } else {
+          /* istanbul ignore else  */
+          if (Math.abs(date.diff(curTo)) < Math.abs(date.diff(moment(closest.to)))) {
+            closest = curnode;
+          }
         }
+      } else if (closest) {
+        // we found a node, and no more nodes exist for the day we need...BAIL
+        break;
       }
 
-      i++;
+      len--;
     }
 
-    return res || fallbackSelector(date, this.basic);
-  },
-
-  /**
-   * Get detailed items for a time.
-   * Find nearest hour on same day, or no result.
-   * @param {String|Object}
-   * @param {Function}
-   */
-  getDetailForTime: function (date) {
-    date = moment.utc(date);
-
-    log('getDetailForTime %s', date);
-
-    // Used to find closest time to one provided
-    var maxDifference = Infinity;
-    var res = null;
-    var itemsForDay = getItemsForDay(this.detail, date);
-    var len = itemsForDay.length;
-    var i = 0;
-
-    while (i < len) {
-      var diff = Math.abs(moment.utc(itemsForDay[i].to).diff(date));
-      if (diff < maxDifference) {
-        maxDifference = diff;
-        res = itemsForDay[i];
-      }
-
-      i++;
-    }
-
-    return res || fallbackSelector(date, this.detail);
+    return closest;
   }
 };
-
-
-/**
- * Build the detailed info for forecast object.
- * @param {Object} detail
- * @param {Object} obj
- */
-
-function buildDetail(detail, basic) {
-  // <location altitude="48" latitude="59.3758" longitude="10.7814">
-  //   <temperature id="TTT" unit="celcius" value="6.3"/>
-  //   <windDirection id="dd" deg="223.7" name="SW"/>
-  //   <windSpeed id="ff" mps="4.2" beaufort="3" name="Lett bris"/>
-  //   <humidity value="87.1" unit="percent"/>
-  //   <pressure id="pr" unit="hPa" value="1010.5"/>
-  //   <cloudiness id="NN" percent="0.0"/>
-  //   <fog id="FOG" percent="0.0"/>
-  //   <lowClouds id="LOW" percent="0.0"/>
-  //   <mediumClouds id="MEDIUM" percent="0.0"/>
-  //   <highClouds id="HIGH" percent="0.0"/>
-  //   <dewpointTemperature id="TD" unit="celcius" value="4.2"/>
-  // </location>
-
-  var obj = {
-    icon: basic.location.symbol.id,
-    to: basic.to,
-    from: basic.from,
-    rain: basic.location.precipitation.value + ' ' + basic.location.precipitation.unit
-  };
-
-  // Corresponds to XML 'location' element
-  var location = detail.location;
-  var cur = null;
-  for (var key in location) {
-    cur = location[key];
-
-    // Based on field type build the response
-    // Type 1: Has "value" and "unit", combine for result
-    // Type 2: Has only "percent"
-    // Type 3: Has multiple properties where the name is the value
-    if (cur.hasOwnProperty('value')) {
-      obj[key] = cur.value + ' ' + cur.unit;
-    } else if (cur.hasOwnProperty('percent')) {
-      obj[key] = cur.percent + '%';
-    } else if (typeof cur === 'object') {
-      obj[key] = {};
-      for (var nestedKey in cur) {
-        if (nestedKey !== 'id') {
-          obj[key][nestedKey] = cur[nestedKey];
-        }
-      }
-    }
-  }
-
-  return obj;
-}
-
-
-/**
- * Used when no matching element is found for a time of a day.
- * @param   {Date}      time
- * @param   {Array}     collection
- */
-function fallbackSelector(time, collection) {
-  time = moment.utc(time);
-
-  var isBefore = false;
-  var len = collection.length;
-  var i = 0;
-
-  while (i < len) {
-    if (time.isBefore(moment(collection[i].to))) {
-      isBefore = true;
-      i = len;
-    }
-
-    i++;
-  }
-
-  return isBefore ? collection[0] : collection[collection.length - 1];
-}
-
-
-/**
- * Provides detailed forecasts for a given date.
- * @param {Array}         collection
- * @param {String|Object} date
- */
-
-function getItemsForDay(collection, date) {
-  date = moment.utc(date);
-
-  return filter(collection, function (item) {
-    return (
-      moment.utc(item.from).isSame(date, 'day') ||
-      moment.utc(item.to).isSame(date, 'day')
-    );
-  });
-}
