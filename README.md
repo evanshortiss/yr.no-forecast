@@ -74,10 +74,10 @@ many time formats will work, but a millisecond timestamp or ISO formatted date
 string are both ideal options to use use.
 
 ### LocationForecast.getXml()
-Returns the XML string that the locationforecast API returned.
+Returns the raw XML string that the `locationforecast` API returned.
 
 ### LocationForecast.getJson()
-Returns the JSON representation of a locationforecast response.
+Returns the JSON representation of the entire `locationforecast` response.
 
 ### LocationForecast.getFirstDateInPayload()
 Returns the first date string that is available in the data returned from the
@@ -89,30 +89,75 @@ weather data for.
 
 
 ## Weather JSON Format
-Format is somewhat inspired by that of the
-[forecast.io](https://developer.forecast.io/) service.
 
 Some fields will be undefined depending on the weather conditions. Always
-verify the field you need exists by using `data.hasOwnProperty('fog')`
-or similar techniques.
+verify the field you need exists, e.g use `data.hasOwnProperty('fog')` or
+similar techniques.
 
-```js
+```json
 {
-    icon: 'PARTLYCLOUD',
-    to: '2013-11-15T18:00:00Z',
-    from: '2013-11-15T12:00:00Z',
-    rain: '0.0 mm',
-    temperature: '9.7 celcius',
-    windDirection: { deg: '220.2', name: 'SW' },
-    windSpeed: { mps: '2.7', beaufort: '2', name: 'Svak vind' },
-    humidity: '27.9 percent',
-    pressure: '1021.0 hPa',
-    cloudiness: '0.0%',
-    fog: '0.0%',
-    lowClouds: '0.0%',
-    mediumClouds: '0.0%',
-    highClouds: '0.0%',
-    dewpointTemperature: '-8.3 celcius'
+  "datatype": "forecast",
+  "from": "2017-04-18T03:00:00Z",
+  "to": "2017-04-18T03:00:00Z",
+  "icon": "PartlyCloud",
+  "rain": "0.0 mm",
+  "altitude": "0",
+  "latitude": "59.8940",
+  "longitude": "10.6450",
+  "temperature": {
+    "id": "TTT",
+    "unit": "celsius",
+    "value": "-0.9"
+  },
+  "windDirection": {
+    "id": "dd",
+    "deg": "14.6",
+    "name": "N"
+  },
+  "windSpeed": {
+    "id": "ff",
+    "mps": "1.5",
+    "beaufort": "1",
+    "name": "Flau vind"
+  },
+  "windGust": {
+    "id": "ff_gust",
+    "mps": "2.4"
+  },
+  "humidity": {
+    "value": "78.3",
+    "unit": "percent"
+  },
+  "pressure": {
+    "id": "pr",
+    "unit": "hPa",
+    "value": "1030.1"
+  },
+  "cloudiness": {
+    "id": "NN",
+    "percent": "15.4"
+  },
+  "fog": {
+    "id": "FOG",
+    "percent": "0.0"
+  },
+  "lowClouds": {
+    "id": "LOW",
+    "percent": "15.4"
+  },
+  "mediumClouds": {
+    "id": "MEDIUM",
+    "percent": "0.8"
+  },
+  "highClouds": {
+    "id": "HIGH",
+    "percent": "0.0"
+  },
+  "dewpointTemperature": {
+    "id": "TD",
+    "unit": "celsius",
+    "value": "-4.5"
+  }
 }
 ```
 

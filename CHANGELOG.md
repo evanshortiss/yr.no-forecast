@@ -7,7 +7,7 @@ Dates use DD/MM/YYYY format.
 improved algorithm for getting weather nodes.
 * Simplify codebase.
 * Update JSON output format to be closer to the original XML content. This gives
-users of this module more flexibility and information.
+users of this module more flexibility and information but is a breaking change.
 * Add `getValidTimes` function.
 * Fix security `request` and `qs` module vulnerabilities by updating to `yr.no-interface@1.0.1`.
 

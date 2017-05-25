@@ -145,6 +145,8 @@ describe('yr.no-forecast', function() {
 
           var prev = null;
 
+          console.log(JSON.stringify(summary[0], null, 2));
+
           summary.forEach(function (cur) {
             if (prev) {
               expect(moment(prev.from).isBefore(moment(cur.from))).to.be.true;
