@@ -188,7 +188,7 @@ LocationForecast.prototype = {
    * @param {Function} callback
    */
   getFiveDaySummary: function() {
-    const startDate = moment(this.getFirstDateInPayload());
+    const startDate = moment.utc(this.getFirstDateInPayload());
     const baseDate = startDate.clone().set('hour', 12).startOf('hour');
     let firstDate = baseDate.clone();
 

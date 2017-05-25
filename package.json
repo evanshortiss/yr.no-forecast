@@ -4,7 +4,7 @@
   "description": "retrieve a weather forecast for a given time and location from met.no",
   "main": "./index.js",
   "scripts": {
-    "test": "npm run lint && npm run unit && npm run coverage",
+    "test": "date && npm run lint && npm run unit && npm run coverage",
     "lint": "npm run eslint && npm run linelint",
     "eslint": "eslint index.js test/*.js",
     "linelint": "linelint -l 120 index.js test/*.js",
