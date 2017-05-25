@@ -145,8 +145,6 @@ describe('yr.no-forecast', function() {
 
           var prev = null;
 
-          console.log(JSON.stringify(summary[0], null, 2));
-
           summary.forEach(function (cur) {
             if (prev) {
               expect(moment(prev.from).isBefore(moment(cur.from))).to.be.true;
@@ -204,7 +202,7 @@ describe('yr.no-forecast', function() {
         .then(function(weather) {
           expect(weather).to.be.an('object');
 
-          return weather.getForecastForTime(moment('2017-04-15'));
+          return weather.getForecastForTime(moment.utc('2017-04-15'));
         })
         .then(function (forecast) {
           expect(forecast).to.equal(null);
@@ -212,7 +210,7 @@ describe('yr.no-forecast', function() {
     });
 
     it('should get weather for 10:00 PM (22:00) by rounding up', function() {
-      var time = moment('2017-04-18');
+      var time = moment.utc('2017-04-18');
       time.set('hours', 21);
       time.set('minutes', 35);
 
@@ -242,7 +240,7 @@ describe('yr.no-forecast', function() {
     });
 
     it('should get weather for 9:00 PM (21:00) by rounding down', function() {
-      var time = moment('2017-04-18');
+      var time = moment.utc('2017-04-18');
       time.set('hours', 21);
       time.set('minutes', 20);
 
