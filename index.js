@@ -138,8 +138,8 @@ LocationForecast.prototype = {
         parent.rain = node.location.precipitation.value + ' ' + node.location.precipitation.unit;
 
         parent.rainDetails = {
-          minRain: node.location.precipitation.minvalue,
-          maxRain: node.location.precipitation.maxvalue,
+          minRain: 'minvalue' in node.location.precipitation ? node.location.precipitation.minvalue : null,
+          maxRain: 'minvalue' in node.location.precipitation ? node.location.precipitation.maxvalue : null,
           rain: node.location.precipitation.value,
           unit: node.location.precipitation.unit
         };
