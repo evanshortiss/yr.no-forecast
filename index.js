@@ -137,6 +137,13 @@ LocationForecast.prototype = {
         parent.icon = node.location.symbol.id;
         parent.rain = node.location.precipitation.value + ' ' + node.location.precipitation.unit;
 
+        parent.rainDetails = {
+          minRain: node.location.precipitation.minvalue,
+          maxRain: node.location.precipitation.maxvalue,
+          rain: node.location.precipitation.value,
+          unit: node.location.precipitation.unit
+        };
+
         /* istanbul ignore else  */
         if (temps) {
           parent.minTemperature = node.location.minTemperature;
