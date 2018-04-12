@@ -2,7 +2,11 @@
 
 Dates use DD/MM/YYYY format.
 
-## 2.0.0 - 24/05/17
+## 2.1.0 - 12/04/2018
+* Bump momentjs to avoid vulnerability
+* Bump yr.no-interface to use latest api.met.no URL
+
+## 2.0.0 - 24/05/2017
 * Increase performance by approximately 10x due to use of `pixl-xml` and
 improved algorithm for getting weather nodes.
 * Simplify codebase.
