@@ -23,10 +23,10 @@
     "lodash.filter": "~4.6.0",
     "lodash.find": "~4.6.0",
     "lodash.foreach": "~4.5.0",
-    "moment": "~2.18.1",
+    "moment": "~2.22.0",
     "pixl-xml": "~1.0.10",
     "verror": "~1.9.0",
-    "yr.no-interface": "~1.0.1"
+    "yr.no-interface": "~1.2.0"
   },
   "license": "MIT",
   "repository": {
