@@ -262,7 +262,7 @@ LocationForecast.prototype = {
     }
 
     if (time.minute() > 30) {
-      time.add('hours', 1).startOf('hour');
+      time.add(1, 'hours').startOf('hour');
     } else {
       time.startOf('hour');
     }
